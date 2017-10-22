@@ -46,15 +46,11 @@ public class PlayerMove : MonoBehaviour {
         }
         if (canMove && Input.GetMouseButtonUp(0) && cdTracker <= 0)
         {
-            canMove = false;
+            //canMove = false;
             cdTracker = jumpCoolDown;
             var targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 vector = new Vector3(targetPos.x - this.transform.position.x, targetPos.y - this.transform.position.y, this.transform.position.z).normalized;
             this.GetComponent<Rigidbody2D>().AddForce(vector*speed);
-        }
-        else if (canMove)
-        {
-            this.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         }
     }
 

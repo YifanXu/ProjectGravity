@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Output
   layers:
   - Default
   - TransparentFX
@@ -40,6 +41,9 @@ TagManager:
   m_SortingLayers:
   - name: Stage
     uniqueID: 299713461
+    locked: 0
+  - name: StageMods
+    uniqueID: 3642370361
     locked: 0
   - name: Default
     uniqueID: 0

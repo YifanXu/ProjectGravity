@@ -5,11 +5,15 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour {
     public float speed;
 
-    private bool canMove = true;
+    public bool canMove;
+    public float jumpCoolDown;
+    public float cdTracker = 0f;
+
+    private GameObject cloestTrigger;
 
 	// Use this for initialization
 	void Start () {
-		
+        this.canMove = true;
 	}
 
     // Update is called once per frame
@@ -35,13 +39,22 @@ public class PlayerMove : MonoBehaviour {
 
         this.GetComponent<Rigidbody2D>().AddForce(totalVector);
         */
-        //MouseInput
-        if (canMove && Input.GetMouseButtonUp(0))
+        //MouseInput    
+        if(cdTracker > 0)
+        {
+            cdTracker -= Time.deltaTime;
+        }
+        if (canMove && Input.GetMouseButtonUp(0) && cdTracker <= 0)
         {
             canMove = false;
+            cdTracker = jumpCoolDown;
             var targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 vector = new Vector3(targetPos.x - this.transform.position.x, targetPos.y - this.transform.position.y, this.transform.position.z).normalized;
             this.GetComponent<Rigidbody2D>().AddForce(vector*speed);
+        }
+        else if (canMove)
+        {
+            this.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         }
     }
 

@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="MovementTesting.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\PlayerMove.cs">
+    <Files>
+      <File FileName="Assets\ColliderTrigger.cs" Line="23" Column="43" />
+      <File FileName="Assets\PlayerMove.cs" Line="7" Column="22" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

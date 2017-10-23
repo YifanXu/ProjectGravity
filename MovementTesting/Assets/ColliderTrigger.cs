@@ -22,7 +22,6 @@ public class ColliderTrigger : MonoBehaviour {
     /// <param name="other">The other object</param>
     void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Entering Wall");
         var rigidbody = this.GetComponent<Rigidbody2D>();
         rigidbody.velocity = Vector3.zero;
         rigidbody.angularVelocity = 0;
@@ -35,7 +34,6 @@ public class ColliderTrigger : MonoBehaviour {
     /// <param name="other"></param>
     void OnCollisionExit2D(Collision2D other)
     {
-        Debug.Log("Leaving Wall");
         this.GetComponent<PlayerMove>().canMove = false;
     }
 }

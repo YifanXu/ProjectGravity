@@ -10,7 +10,9 @@ public interface IOutputModule
 public class SwitchInput : MonoBehaviour {
     public static List<GameObject> switches;
 
-    public GameObject Target;
+    public GameObject Target1;
+    public GameObject Target2;
+    public GameObject Target3;
 
     public static GameObject GetClosestSwitch(out float distance)
     {
@@ -19,7 +21,7 @@ public class SwitchInput : MonoBehaviour {
         foreach (GameObject obj in switches)
         {
             float thisDist = Vector3.Distance(obj.transform.position, PlayerInput.Player.transform.position);
-            if (thisDist > distance)
+            if (closestSoFar == null || thisDist < distance)
             {
                 distance = thisDist;
                 closestSoFar = obj;
@@ -46,7 +48,17 @@ public class SwitchInput : MonoBehaviour {
 
     public void Trigger()
     {
-        Target.GetComponent<OuputBehavior>().Activate();
-        
+        if(Target1 != null)
+        {
+            Target1.GetComponent<OuputBehavior>().Activate();
+        }
+        if (Target2 != null)
+        {
+            Target2.GetComponent<OuputBehavior>().Activate();
+        }
+        if (Target3 != null)
+        {
+            Target3.GetComponent<OuputBehavior>().Activate();
+        }
     }
 }

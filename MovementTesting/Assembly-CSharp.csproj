@@ -51,14 +51,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CameraMovement.cs" />
-     <Compile Include="Assets\ColliderTrigger.cs" />
-     <Compile Include="Assets\DoorBehavior.cs" />
-     <Compile Include="Assets\ExitBehavior.cs" />
-     <Compile Include="Assets\OuputBehavior.cs" />
-     <Compile Include="Assets\PlayerInput.cs" />
-     <Compile Include="Assets\PlayerMove.cs" />
-     <Compile Include="Assets\SwitchInput.cs" />
+     <Compile Include="Assets\Scripts\ButtonBehavior.cs" />
+     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\ColliderTrigger.cs" />
+     <Compile Include="Assets\Scripts\DoorBehavior.cs" />
+     <Compile Include="Assets\Scripts\ExitBehavior.cs" />
+     <Compile Include="Assets\Scripts\OuputBehavior.cs" />
+     <Compile Include="Assets\Scripts\PistonBehavior.cs" />
+     <Compile Include="Assets\Scripts\PlayerInput.cs" />
+     <Compile Include="Assets\Scripts\PlayerMove.cs" />
+     <Compile Include="Assets\Scripts\SpikeBehavior.cs" />
+     <Compile Include="Assets\Scripts\SwitchInput.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

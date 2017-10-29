@@ -2,7 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Direction {
+    Up,
+    Down,
+    Left,
+    Right
+}
+
 public class PlayerMove : MonoBehaviour {
+
+    public Vector2 direction;
+
+    public bool ClickMove;
+
+    private static Dictionary<KeyCode, Vector2> moveDict = new Dictionary<KeyCode, Vector2>()
+    {
+        {KeyCode.UpArrow, new Vector2 (0,1) },
+        {KeyCode.DownArrow, new Vector2 (0,-1) },
+        {KeyCode.RightArrow, new Vector2 (1,0) },
+        {KeyCode.LeftArrow, new Vector2 (-1,0) },
+    };
+
     public float speed;
 
     public bool canMove;
@@ -17,40 +37,37 @@ public class PlayerMove : MonoBehaviour {
 	}
 
     // Update is called once per frame
-    void Update () {
-        /*   ArrowInput
-        Vector3 totalVector = new Vector3(0, 0, 0);
-        if(Input.GetKey(KeyCode.UpArrow))
+    void FixedUpdate () {
+        if (!ClickMove)
         {
-            totalVector.y = speed * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            totalVector.y = -1* speed * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            totalVector.x = -1 * speed * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            totalVector.x = speed * Time.deltaTime;
-        }
 
-        this.GetComponent<Rigidbody2D>().AddForce(totalVector);
-        */
-        //MouseInput    
-        if(cdTracker > 0)
-        {
-            cdTracker -= Time.deltaTime;
+            Vector2 direction = new Vector2();
+            foreach (KeyValuePair<KeyCode, Vector2> pair in moveDict)
+            {
+                if (Input.GetKeyDown(pair.Key))
+                {
+                    this.GetComponent<Rigidbody2D>().velocity = new Vector2();
+                    direction = pair.Value;
+                }
+            }
+            this.GetComponent<Rigidbody2D>().AddForce(direction * speed);
+
         }
-        if (canMove && Input.GetMouseButtonUp(0) && cdTracker <= 0)
+        else
         {
-            //canMove = false;
-            cdTracker = jumpCoolDown;
-            var targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 vector = new Vector3(targetPos.x - this.transform.position.x, targetPos.y - this.transform.position.y, this.transform.position.z).normalized;
-            this.GetComponent<Rigidbody2D>().AddForce(vector*speed);
+            
+            if (cdTracker > 0)
+            {
+                cdTracker -= Time.deltaTime;
+            }
+            if (canMove && Input.GetMouseButtonUp(0) && cdTracker <= 0)
+            {
+                canMove = false;
+                cdTracker = jumpCoolDown;
+                var targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector3 vector = new Vector3(targetPos.x - this.transform.position.x, targetPos.y - this.transform.position.y, this.transform.position.z).normalized;
+                this.GetComponent<Rigidbody2D>().AddForce(vector * speed);
+            }
         }
     }
 

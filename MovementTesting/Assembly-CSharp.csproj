@@ -56,12 +56,13 @@
      <Compile Include="Assets\Scripts\ColliderTrigger.cs" />
      <Compile Include="Assets\Scripts\DoorBehavior.cs" />
      <Compile Include="Assets\Scripts\ExitBehavior.cs" />
+     <Compile Include="Assets\Scripts\GravityBehavior.cs" />
      <Compile Include="Assets\Scripts\OuputBehavior.cs" />
      <Compile Include="Assets\Scripts\PistonBehavior.cs" />
      <Compile Include="Assets\Scripts\PlayerInput.cs" />
      <Compile Include="Assets\Scripts\PlayerMove.cs" />
      <Compile Include="Assets\Scripts\SpikeBehavior.cs" />
-     <Compile Include="Assets\Scripts\SpinScript.cs" />
+     <Compile Include="Assets\Scripts\SpinBehavior.cs" />
      <Compile Include="Assets\Scripts\SwitchInput.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

@@ -6,7 +6,7 @@ public class ButtonBehavior : MonoBehaviour {
     public static List<GameObject> switches;
 
     public float extention;
-    private float extentionCount;
+    private float extentionCount = -100;
 
     public Sprite unpressedButton;
     public Sprite pressedButton;
@@ -37,9 +37,13 @@ public class ButtonBehavior : MonoBehaviour {
 
     void OnTriggerEnter2D (Collider2D other)
     {
+        if (this.extentionCount == -100)
+        {
+            Trigger();
+        }
         this.extentionCount = -100;
         this.GetComponent<SpriteRenderer>().sprite = pressedButton;
-        Trigger();
+        
     }
 
     void OnTriggerExit2D(Collider2D other)

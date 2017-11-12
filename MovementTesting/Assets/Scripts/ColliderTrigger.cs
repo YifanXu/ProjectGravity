@@ -26,6 +26,7 @@ public class ColliderTrigger : MonoBehaviour {
         rigidbody.velocity = Vector3.zero;
         rigidbody.angularVelocity = 0;
         this.GetComponent<PlayerMove>().RestoreMove();
+        this.GetComponent<PlayerMove>().special = true;
     }
 
     void OnCollisionStay2D(Collision2D other)

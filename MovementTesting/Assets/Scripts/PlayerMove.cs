@@ -12,15 +12,23 @@ public enum Direction {
 public class PlayerMove : MonoBehaviour {
 
     public Vector2 direction;
-
+    public bool special;
     public bool ClickMove;
 
-    private static Dictionary<KeyCode, Vector2> moveDict = new Dictionary<KeyCode, Vector2>()
+    private static Dictionary<KeyCode, int> moveDict = new Dictionary<KeyCode, int>()
     {
-        {KeyCode.UpArrow, new Vector2 (0,1) },
-        {KeyCode.DownArrow, new Vector2 (0,-1) },
-        {KeyCode.RightArrow, new Vector2 (1,0) },
-        {KeyCode.LeftArrow, new Vector2 (-1,0) },
+        {KeyCode.A, 0},
+        {KeyCode.W, 1},
+        {KeyCode.D, 2 },
+        {KeyCode.S, 3 },
+    };
+
+    private static Dictionary<int, Vector2> outputDict = new Dictionary<int, Vector2>()
+    {
+        {0, Vector2.left},
+        {1, Vector2.up },
+        {2,Vector2.right },
+        {3, Vector2.down },
     };
 
     public float speed;
@@ -38,20 +46,26 @@ public class PlayerMove : MonoBehaviour {
 
     // Update is called once per frame
     void FixedUpdate () {
+        if(Input.GetKeyDown(KeyCode.Space)&&special)
+        {
+            this.special = false;
+            this.GetComponent<Rigidbody2D>().velocity = new Vector2();
+            
+        }
         if (!ClickMove)
         {
-
-            Vector2 direction = new Vector2();
-            foreach (KeyValuePair<KeyCode, Vector2> pair in moveDict)
+            if (canMove)
             {
-                if (Input.GetKeyDown(pair.Key))
+                Vector2 direction = new Vector2();
+                foreach (KeyValuePair<KeyCode, int> pair in moveDict)
                 {
-                    this.GetComponent<Rigidbody2D>().velocity = new Vector2();
-                    direction = pair.Value;
+                    if (Input.GetKeyDown(pair.Key))
+                    {
+                        direction += outputDict[(pair.Value - GravityBehavior.rotationIndex + 1000) % 4].normalized;
+                    }
                 }
-            }
-            this.GetComponent<Rigidbody2D>().AddForce(direction * speed);
-
+                this.GetComponent<Rigidbody2D>().AddForce(direction * speed * Time.deltaTime);
+            }   
         }
         else
         {
@@ -70,6 +84,8 @@ public class PlayerMove : MonoBehaviour {
             }
         }
     }
+
+    
 
     public void RestoreMove()
     {

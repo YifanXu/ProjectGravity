@@ -22,6 +22,10 @@ public class SwitchInput : MonoBehaviour {
     public static GameObject GetClosestSwitch(out float distance)
     {
         distance = 0;
+        if (switches == null || switches.Count == 0)
+        {
+            return null;
+        }
         GameObject closestSoFar = null;
         foreach (GameObject obj in switches)
         {

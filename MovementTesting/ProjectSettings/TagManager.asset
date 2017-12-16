@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Output
+  - StageProp
+  - Stage
+  - Ghost
   layers:
   - Default
   - TransparentFX
@@ -50,4 +53,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: SPX
+    uniqueID: 1932562911
     locked: 0

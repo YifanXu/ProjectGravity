@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ColliderTrigger : MonoBehaviour {
 
-    
-
 	// Use this for initialization
 	void Start () {
 		
@@ -22,16 +20,22 @@ public class ColliderTrigger : MonoBehaviour {
     /// <param name="other">The other object</param>
     void OnCollisionEnter2D(Collision2D other)
     {
-        var rigidbody = this.GetComponent<Rigidbody2D>();
-        rigidbody.velocity = Vector3.zero;
-        rigidbody.angularVelocity = 0;
-        this.GetComponent<PlayerMove>().RestoreMove();
-        this.GetComponent<PlayerMove>().special = true;
+        //var rigidbody = this.GetComponent<Rigidbody2D>();
+        //rigidbody.velocity = Vector3.zero;
+        //rigidbody.angularVelocity = 0;
+        if (other.gameObject.tag != "StageProp")
+        {
+            this.GetComponent<PlayerMove>().RestoreMove();
+            this.GetComponent<PlayerMove>().special = true;
+        }
     }
 
     void OnCollisionStay2D(Collision2D other)
     {
-        this.GetComponent<PlayerMove>().RestoreMove();
+        if (other.gameObject.tag != "StageProp")
+        {
+            this.GetComponent<PlayerMove>().RestoreMove();
+        }
     }
 
     /// <summary>
@@ -40,6 +44,9 @@ public class ColliderTrigger : MonoBehaviour {
     /// <param name="other"></param>
     void OnCollisionExit2D(Collision2D other)
     {
-        this.GetComponent<PlayerMove>().canMove = false;
+        if (other.gameObject.tag != "StageProp")
+        {
+            this.GetComponent<PlayerMove>().canMove = false;
+        }
     }
 }

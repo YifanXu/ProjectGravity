@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum Direction {
     Up,
@@ -15,23 +16,12 @@ public class PlayerMove : MonoBehaviour {
     public bool special;
     public bool ClickMove;
 
-    private static Dictionary<KeyCode, int> moveDict = new Dictionary<KeyCode, int>()
-    {
-        {KeyCode.A, 0},
-        {KeyCode.W, 1},
-        {KeyCode.D, 2 },
-        {KeyCode.S, 3 },
-    };
-
-    private static Dictionary<int, Vector2> outputDict = new Dictionary<int, Vector2>()
-    {
-        {0, Vector2.left},
-        {1, Vector2.up },
-        {2,Vector2.right },
-        {3, Vector2.down },
-    };
+    private static int jumpIndex = 2;
+    private static int leftIndex = 3;
+    private static int rightIndex = 1;
 
     public float speed;
+    public float jumpForceMultiplier = 2;
 
     public bool canMove;
     public float jumpCoolDown;
@@ -54,18 +44,20 @@ public class PlayerMove : MonoBehaviour {
         }
         if (!ClickMove)
         {
-            if (canMove)
+            Vector2 netforce = new Vector2();
+            if (canMove && Input.GetKeyDown(KeyCode.W))
             {
-                Vector2 direction = new Vector2();
-                foreach (KeyValuePair<KeyCode, int> pair in moveDict)
-                {
-                    if (Input.GetKeyDown(pair.Key))
-                    {
-                        direction += outputDict[(pair.Value - GravityBehavior.rotationIndex + 1000) % 4].normalized;
-                    }
-                }
-                this.GetComponent<Rigidbody2D>().AddForce(direction * speed * Time.deltaTime);
-            }   
+                netforce += GetDirection(jumpIndex) * jumpForceMultiplier;
+            }
+            if(Input.GetKey(KeyCode.A))
+            {
+                netforce += GetDirection(leftIndex);
+            }
+            if(Input.GetKey(KeyCode.D))
+            {
+                netforce += GetDirection(rightIndex);
+            }
+            this.GetComponent<Rigidbody2D>().AddForce(netforce * speed);
         }
         else
         {
@@ -85,10 +77,15 @@ public class PlayerMove : MonoBehaviour {
         }
     }
 
-    
+    public Vector2 GetDirection (int index)
+    {
+        return GravityBehavior.directions[(index + GravityBehavior.rotationIndex + 4000) % 4];
+    }
 
     public void RestoreMove()
     {
         this.canMove = true;
     }
+
+    
 }

@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class SpinBehavior : MonoBehaviour {
     public int rotationIndex;
-    public float smallSize;
-    public float bigSize;
+    public float smallSize = 5f;
+    public float bigSize = 5f;
     //public float lerpFactor;
     //public float SpinInterval;
 
     public float rotationLeft = 0f;
-    public float lerpFactor;
+    public float lerpFactor = 0.3f;
+
+    public int initialRotation;
 
     // Use this for initialization
     void Start () {
-		
+        this.transform.Rotate(new Vector3(0, 0, initialRotation));
 	}
 	
 	// Update is called once per frame

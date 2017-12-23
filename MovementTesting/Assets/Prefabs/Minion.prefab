@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gracePeriod: 0.3
-  Velocity: 5
+  Velocity: 2
   wallDetector: {fileID: 1032502153949342}
   edgeDetector: {fileID: 1493216012713936}
   index: 0

@@ -7,6 +7,8 @@ public class BulletBehavior : MonoBehaviour {
     public Vector2 initialVelocity;
     public float speed;
 
+    public float gracePeriod = 1f;
+
 	// Use this for initialization
 	void Start () {
         this.GetComponent<Rigidbody2D>().AddForce(initialVelocity.normalized * speed);
@@ -14,23 +16,29 @@ public class BulletBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (gracePeriod >= 0)
+        {
+            gracePeriod -= Time.deltaTime;
+        }
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if (gracePeriod <= 0)
         {
-            PlayerInput.Die();
-            return;
-        }
-        if(collision.tag == "Entity")
-        {
+            if (collision.tag == "Player")
+            {
+                PlayerInput.Die();
+                return;
+            }
+            if (collision.tag == "Entity")
+            {
 
-        }
-        else
-        {
-            Destroy(this.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 

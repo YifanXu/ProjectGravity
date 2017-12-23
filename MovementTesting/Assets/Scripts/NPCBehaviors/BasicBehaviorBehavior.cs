@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BasicBehaviorBehavior : MonoBehaviour {
 
-    public float gracePeriod = 0.1f;
+    public float gracePeriod = 0.05f;
     public float Velocity;
     public GameObject wallDetector;
     public GameObject edgeDetector;
@@ -41,7 +41,7 @@ public class BasicBehaviorBehavior : MonoBehaviour {
             this.GetComponent<SpriteRenderer>().flipX = !this.GetComponent<SpriteRenderer>().flipX;
             index += 2;
             wallDetector.GetComponent<Collider2D>().offset = -wallDetector.GetComponent<Collider2D>().offset;
-            edgeDetector.GetComponent<Collider2D>().offset = -edgeDetector.GetComponent<Collider2D>().offset;
+            edgeDetector.GetComponent<Collider2D>().offset = new Vector2(-edgeDetector.GetComponent<Collider2D>().offset.x, edgeDetector.GetComponent<Collider2D>().offset.y);
             graceTimer = 0f;
         }
     }

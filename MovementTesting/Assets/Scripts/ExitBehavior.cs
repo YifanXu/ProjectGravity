@@ -29,7 +29,19 @@ public class ExitBehavior : MonoBehaviour, IOutputModule {
         if(accessible && other.GetComponent<PlayerInput>() != null)
         {
            SwitchInput.ClearCache();
+           GravityBehavior.ResetAll();
            SceneManager.LoadScene(SceneName);
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+        Debug.Log("Exiting");
+        if (accessible && other.GetComponent<PlayerInput>() != null)
+        {
+            SwitchInput.ClearCache();
+            GravityBehavior.ResetAll();
+            SceneManager.LoadScene(SceneName);
         }
     }
 

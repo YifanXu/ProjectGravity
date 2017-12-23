@@ -20,12 +20,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4201815412600018}
   - component: {fileID: 212553081671242688}
-  - component: {fileID: 58642676689519362}
   - component: {fileID: 50018636055396404}
   - component: {fileID: 114575761383469228}
   - component: {fileID: 114620838050186742}
   - component: {fileID: 114363062853916068}
   - component: {fileID: 114362951049004242}
+  - component: {fileID: 70796063008540144}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -66,21 +66,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58642676689519362
-CircleCollider2D:
+--- !u!70 &70796063008540144
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1758543982062754}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 6a627c0e2d3111d488fba35695c21ef8, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1}
+  m_Direction: 0
 --- !u!114 &114362951049004242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,8 +121,8 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   special: 0
   ClickMove: 0
-  speed: 30
-  jumpForceMultiplier: 7
+  speed: 20
+  jumpForceMultiplier: 10
   canMove: 1
   jumpCoolDown: 0.5
   cdTracker: 0

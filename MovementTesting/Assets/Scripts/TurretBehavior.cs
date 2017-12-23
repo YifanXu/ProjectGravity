@@ -26,7 +26,6 @@ public class TurretBehavior : MonoBehaviour {
             bullet.transform.position = this.transform.position;
             newBullet.GetComponent<Rigidbody2D>().AddForce(targetDirection.normalized * bulletSpeed);
         }
-        Debug.Log(targetDirection);
 	}
 
     Vector2 targetDirection

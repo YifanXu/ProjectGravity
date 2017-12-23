@@ -17,6 +17,7 @@ public class GravityBehavior : MonoBehaviour {
 	void Start () {
         this.enabled = true;
         this.privateIndex = rotationIndex;
+        Debug.Log(rotationIndex);
 	}
 
     // Update is called once per frame
@@ -53,5 +54,11 @@ public class GravityBehavior : MonoBehaviour {
     public static Vector2 TranslateDireciton(int index)
     {
         return directions[(index + rotationIndex + 4000) % 4];
+    }
+
+    public static void ResetAll()
+    {
+        rotationIndex = 0;
+        direction = Vector2.down;
     }
 }

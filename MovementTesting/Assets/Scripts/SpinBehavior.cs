@@ -16,6 +16,8 @@ public class SpinBehavior : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        this.transform.eulerAngles = new Vector3(0, 0, 0);
+        GravityBehavior.rotationIndex = 0;
         this.transform.Rotate(new Vector3(0, 0, initialRotation));
 	}
 	

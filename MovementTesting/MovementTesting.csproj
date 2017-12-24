@@ -227,6 +227,7 @@
     <Compile Include="Assets\Scripts\ExitBehavior.cs" />
     <Compile Include="Assets\Scripts\GravityBehavior.cs" />
     <Compile Include="Assets\Scripts\MaxVelocityBehavior.cs" />
+    <Compile Include="Assets\Scripts\MissileBehavior.cs" />
     <Compile Include="Assets\Scripts\NPCBehaviors\BasicBehaviorBehavior.cs" />
     <Compile Include="Assets\Scripts\NPCBehaviors\ChaseBehavior.cs" />
     <Compile Include="Assets\Scripts\NPCBehaviors\EdgeDetector.cs" />
@@ -235,6 +236,8 @@
     <Compile Include="Assets\Scripts\PistonBehavior.cs" />
     <Compile Include="Assets\Scripts\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
+    <Compile Include="Assets\Scripts\RotatingBehavior.cs" />
+    <Compile Include="Assets\Scripts\ShifterBehavior.cs" />
     <Compile Include="Assets\Scripts\SpikeBehavior.cs" />
     <Compile Include="Assets\Scripts\SpinBehavior.cs" />
     <Compile Include="Assets\Scripts\StickyBehavior.cs" />

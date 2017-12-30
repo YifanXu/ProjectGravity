@@ -16,11 +16,17 @@ public class PlatformDetectorBehavior : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        this.gameObject.GetComponentInParent<ShifterBehavior>().Activate();
+        if (!collision.isTrigger)
+        {
+            this.gameObject.GetComponentInParent<ShifterBehavior>().Activate();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        this.gameObject.GetComponentInParent<ShifterBehavior>().Activate();
+        if (!collision.isTrigger)
+        {
+            this.gameObject.GetComponentInParent<ShifterBehavior>().Activate();
+        }
     }
 }

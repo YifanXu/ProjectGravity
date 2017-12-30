@@ -52,4 +52,16 @@ public class MissileBehavior : MonoBehaviour {
             return 1f + acceleration * Time.deltaTime;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            PlayerInput.Die();
+        }
+        else if (collision.tag != "Ghost" && !collision.isTrigger)
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }

@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 61265742755027316}
   m_Layer: 0
   m_Name: Detector
-  m_TagString: Untagged
+  m_TagString: Ghost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

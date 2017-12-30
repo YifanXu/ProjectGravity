@@ -4,35 +4,83 @@ using UnityEngine;
 
 public class TurretBehavior : MonoBehaviour {
 
-    public float fireRate;
-    public float bulletSpeed;
-    public GameObject bullet;
+    public bool AimMouse;
     public GameObject target;
 
-    private float fireTimer;
+    public GameObject bullet;
+    public float shootInterval = 3f;
+    public float shootStrength;
+
+    public float turnSpeed;
+
+    private float timer = 0f;
 
 	// Use this for initialization
 	void Start () {
-        fireTimer = fireRate;
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        fireTimer -= Time.deltaTime;
-        if(fireTimer <= 0)
-        {   
-            fireTimer = fireRate;
-            var newBullet = GameObject.Instantiate(bullet);
-            bullet.transform.position = this.transform.position;
-            newBullet.GetComponent<Rigidbody2D>().AddForce(targetDirection.normalized * bulletSpeed);
+        this.transform.eulerAngles = this.transform.eulerAngles.z.StandarizeEuler().GetRotation();
+        float currentEuler = this.transform.eulerAngles.z;
+        currentEuler = this.transform.eulerAngles.z;
+        float end = targetEuler.StandarizeEuler();
+        if ((end - currentEuler < 180 && end - currentEuler > 0) || end - currentEuler < -180)
+        {
+            currentEuler += turnSpeed;
+            if(Mathf.Abs(currentEuler - end) < 10f)
+            {
+                currentEuler = Mathf.Min(end, currentEuler);
+            }
         }
-	}
+        else if (end - currentEuler > 180 || end - currentEuler < 0)
+        {
+            currentEuler -= turnSpeed;
+            if (Mathf.Abs(currentEuler - end) < 10f)
+            {
+                currentEuler = Mathf.Max(end, currentEuler);
+            }
+        }
+        this.transform.eulerAngles = currentEuler.GetRotation();
 
-    Vector2 targetDirection
+        if (timer >= shootInterval)
+        {
+            timer = 0f;
+            Shoot();
+        }
+        else
+        {
+            timer += Time.deltaTime;
+        }
+    }
+
+    public void Shoot()
+    {
+        var newBullet = Instantiate(bullet, this.transform.position, new Quaternion());
+        newBullet.GetComponent<Rigidbody2D>().AddForce(this.transform.eulerAngles.z.GetVector() * shootStrength);
+        if (newBullet.GetComponent<MissileBehavior>() != null)
+        {
+            newBullet.GetComponent<MissileBehavior>().target = this.target;
+        }
+    }
+
+    public float targetEuler
     {
         get
         {
-            return new Vector2(target.transform.position.x - this.transform.position.x, target.transform.position.y - this.transform.position.y);
+            if(AimMouse)
+            {
+                return GlobalMethods.Get2DEulerAngle(this.transform.position, GlobalMethods.MousePoint);
+            }
+            if(target == null)
+            {
+                return GetComponentInParent<Transform>().eulerAngles.z;
+            }
+            else
+            {
+                return GlobalMethods.Get2DEulerAngle(this.transform.position , target.transform.position);
+            }
         }
     }
 }

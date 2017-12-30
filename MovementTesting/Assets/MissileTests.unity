@@ -249,7 +249,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 60209556723134174, guid: c447677aa70f58f48b534ecca6852560,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: c447677aa70f58f48b534ecca6852560, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1069541354 stripped
@@ -257,6 +263,48 @@ GameObject:
   m_PrefabParentObject: {fileID: 1758543982062754, guid: 8e60a9f34ca391b42843eac9185bfb4f,
     type: 2}
   m_PrefabInternal: {fileID: 2063252650}
+--- !u!1001 &1578281519
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4820811369152392, guid: 6f037324734651e48a8735691e646b2d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820811369152392, guid: 6f037324734651e48a8735691e646b2d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820811369152392, guid: 6f037324734651e48a8735691e646b2d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820811369152392, guid: 6f037324734651e48a8735691e646b2d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820811369152392, guid: 6f037324734651e48a8735691e646b2d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820811369152392, guid: 6f037324734651e48a8735691e646b2d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820811369152392, guid: 6f037324734651e48a8735691e646b2d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820811369152392, guid: 6f037324734651e48a8735691e646b2d, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6f037324734651e48a8735691e646b2d, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1710121896
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +316,7 @@ GameObject:
   - component: {fileID: 1710121898}
   - component: {fileID: 1710121897}
   - component: {fileID: 1710121900}
+  - component: {fileID: 1710121901}
   m_Layer: 0
   m_Name: Missile
   m_TagString: Untagged
@@ -287,7 +336,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1069541354}
-  acceleration: 5
+  initialVelocity: 0.6
+  acceleration: 1.02
+  maxTurningRadius: 1
+  turningChange: 0.5
+  currentTurn: 0
 --- !u!212 &1710121898
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -339,7 +392,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1710121896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.67, y: 3.67, z: 0}
+  m_LocalPosition: {x: -3.01, y: 4.11, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -356,7 +409,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -365,6 +418,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!70 &1710121901
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1710121896}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.016403042, y: -0.0049921414}
+  m_Size: {x: 0.21727529, y: 0.11743376}
+  m_Direction: 1
 --- !u!1001 &2063252650
 Prefab:
   m_ObjectHideFlags: 0

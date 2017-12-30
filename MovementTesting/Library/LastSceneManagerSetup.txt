@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/FinalLevels/SecondBoss.unity
+- path: Assets/FinalLevels/Level 9.unity
   isLoaded: 1
   isActive: 1

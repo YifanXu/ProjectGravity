@@ -8,10 +8,12 @@ public class TurretBehavior : MonoBehaviour {
     public GameObject target;
 
     public GameObject bullet;
-    public KeyCode shootKey;
+    public float shootInterval = 3f;
     public float shootStrength;
 
     public float turnSpeed;
+
+    private float timer = 0f;
 
 	// Use this for initialization
 	void Start () {
@@ -42,14 +44,24 @@ public class TurretBehavior : MonoBehaviour {
         }
         this.transform.eulerAngles = currentEuler.GetRotation();
 
-        if(Input.GetKeyDown(shootKey))
+        if (timer >= shootInterval)
         {
-            var newBullet = Instantiate(bullet, this.transform.position, new Quaternion());
-            newBullet.GetComponent<Rigidbody2D>().AddForce(this.transform.eulerAngles.z.GetVector() * shootStrength);
-            if(newBullet.GetComponent<MissileBehavior>() != null)
-            {
-                newBullet.GetComponent<MissileBehavior>().target = this.target;
-            }
+            timer = 0f;
+            Shoot();
+        }
+        else
+        {
+            timer += Time.deltaTime;
+        }
+    }
+
+    public void Shoot()
+    {
+        var newBullet = Instantiate(bullet, this.transform.position, new Quaternion());
+        newBullet.GetComponent<Rigidbody2D>().AddForce(this.transform.eulerAngles.z.GetVector() * shootStrength);
+        if (newBullet.GetComponent<MissileBehavior>() != null)
+        {
+            newBullet.GetComponent<MissileBehavior>().target = this.target;
         }
     }
 

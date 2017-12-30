@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bcae36a70dafff4593cdd7b48c1da6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationDelay: 0.2
+  activationDelay: 0.1
   activated: {fileID: 21300000, guid: 560977fa14b35bb4c869e4a8b4bb7b71, type: 3}
   deactivated: {fileID: 21300000, guid: 81cdf151919c553468cf9db55ed70910, type: 3}
   timer: 0

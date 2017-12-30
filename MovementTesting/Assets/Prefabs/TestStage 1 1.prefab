@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4172536361765986}
   - component: {fileID: 212266782707437972}
   - component: {fileID: 60209556723134174}
-  - component: {fileID: 95001283725587994}
   m_Layer: 0
   m_Name: TestStage 1 1
   m_TagString: Stage
@@ -76,23 +75,6 @@ PolygonCollider2D:
       - {x: -0.5, y: 0.5}
       - {x: 0.5, y: 0.5}
       - {x: 0.5219876, y: 0.5690469}
---- !u!95 &95001283725587994
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1353527788819056}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!212 &212266782707437972
 SpriteRenderer:
   m_ObjectHideFlags: 1

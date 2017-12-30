@@ -4,29 +4,46 @@ using UnityEngine;
 
 public class ShifterBehavior : MonoBehaviour {
 
-    public float interval;
+    public float activationDelay;
 
     public Sprite activated;
     public Sprite deactivated;
 
-    private float timer;
+    public float timer;
 
 	// Use this for initialization
 	void Start () {
         UpdateSprite();
+        timer = activationDelay;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        timer += Time.deltaTime;
-
-        if(timer >= interval)
+        if(timer < 0f)
         {
-            timer = 0;
             this.GetComponent<Collider2D>().isTrigger = !this.GetComponent<Collider2D>().isTrigger;
             UpdateSprite();
+            timer = activationDelay;
+        }
+        else if(timer < activationDelay)
+        {
+            timer -= Time.deltaTime;
         }
 	}
+
+    public void Activate()
+    {
+        if (timer < activationDelay)
+        {
+            Debug.Log("Cancel Activation");
+            timer = activationDelay;
+        }
+        else
+        {
+            Debug.Log("Activation");
+            timer -= Time.deltaTime;
+        }
+    }
 
     public void UpdateSprite()
     {

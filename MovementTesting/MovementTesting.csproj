@@ -225,6 +225,7 @@
     <Compile Include="Assets\Scripts\ColliderTrigger.cs" />
     <Compile Include="Assets\Scripts\DoorBehavior.cs" />
     <Compile Include="Assets\Scripts\ExitBehavior.cs" />
+    <Compile Include="Assets\Scripts\GlobalMethods.cs" />
     <Compile Include="Assets\Scripts\GravityBehavior.cs" />
     <Compile Include="Assets\Scripts\MaxVelocityBehavior.cs" />
     <Compile Include="Assets\Scripts\MissileBehavior.cs" />
@@ -234,6 +235,7 @@
     <Compile Include="Assets\Scripts\NPCBehaviors\WallDetectorBehavior.cs" />
     <Compile Include="Assets\Scripts\OuputBehavior.cs" />
     <Compile Include="Assets\Scripts\PistonBehavior.cs" />
+    <Compile Include="Assets\Scripts\PlatformDetectorBehavior.cs" />
     <Compile Include="Assets\Scripts\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\RotatingBehavior.cs" />

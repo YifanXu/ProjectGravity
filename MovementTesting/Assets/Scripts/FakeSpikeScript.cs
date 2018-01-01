@@ -1,11 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class SpikeBehavior : MonoBehaviour {
-
-    public string DeathSceneName;
+public class FakeSpikeScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -19,9 +16,10 @@ public class SpikeBehavior : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (object.ReferenceEquals(collision.gameObject, PlayerInput.Player))
+        if(collision.gameObject.tag == "Player")
         {
-            PlayerInput.Die();
+            Destroy(this.gameObject);
         }
     }
 }
+    

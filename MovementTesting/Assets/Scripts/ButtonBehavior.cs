@@ -37,6 +37,7 @@ public class ButtonBehavior : MonoBehaviour {
 
     void OnTriggerEnter2D (Collider2D other)
     {
+        
         if (this.extentionCount == -100)
         {
             Trigger();

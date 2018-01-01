@@ -223,8 +223,10 @@
     <Compile Include="Assets\Scripts\ButtonBehavior.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\ColliderTrigger.cs" />
+    <Compile Include="Assets\Scripts\DeathControllerScript.cs" />
     <Compile Include="Assets\Scripts\DoorBehavior.cs" />
     <Compile Include="Assets\Scripts\ExitBehavior.cs" />
+    <Compile Include="Assets\Scripts\FakeSpikeScript.cs" />
     <Compile Include="Assets\Scripts\GlobalMethods.cs" />
     <Compile Include="Assets\Scripts\GravityBehavior.cs" />
     <Compile Include="Assets\Scripts\MaxVelocityBehavior.cs" />

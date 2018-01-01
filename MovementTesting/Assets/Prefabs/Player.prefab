@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114620838050186742}
   - component: {fileID: 114363062853916068}
   - component: {fileID: 114362951049004242}
-  - component: {fileID: 70796063008540144}
+  - component: {fileID: 58768552839816760}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -61,13 +61,13 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: 6a627c0e2d3111d488fba35695c21ef8, type: 2}
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &70796063008540144
-CapsuleCollider2D:
+--- !u!58 &58768552839816760
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -79,8 +79,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1}
-  m_Direction: 0
+  serializedVersion: 2
+  m_Radius: 0.49999997
 --- !u!114 &114362951049004242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,6 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88521889d086c6745b45cb33953f7645, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathController: {fileID: 1940687274201754, guid: 3d9177ba0e7e4894a8137312e9c085d9,
+    type: 2}
   TriggerMaxDistance: 1.5
 --- !u!212 &212553081671242688
 SpriteRenderer:

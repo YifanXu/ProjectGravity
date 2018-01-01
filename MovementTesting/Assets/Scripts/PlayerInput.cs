@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerInput : MonoBehaviour {
 
+    public GameObject deathController = null;
     public static GameObject Player;
 
     public float TriggerMaxDistance;
@@ -38,6 +39,6 @@ public class PlayerInput : MonoBehaviour {
 
     public static void Die()
     {
-        SceneManager.LoadScene("DeathScene");
+        Instantiate(Player.GetComponent<PlayerInput>().deathController);
     }
 }

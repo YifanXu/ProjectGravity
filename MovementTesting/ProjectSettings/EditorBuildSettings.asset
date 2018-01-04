@@ -12,8 +12,11 @@ EditorBuildSettings:
     path: Assets/PlayScene.unity
     guid: eaa6cc2d02d32644b86af629cd3b1352
   - enabled: 1
-    path: Assets/DeathScene.unity
+    path: Assets/FinalLevels/DeathScene.unity
     guid: 5fb22f18b873f3849b02283e2743e873
+  - enabled: 1
+    path: Assets/FinalLevels/SecondBoss.unity
+    guid: 39cc405e9f7743e4383d7d56833c9282
   - enabled: 0
     path: Assets/FirstScene.unity
     guid: 59c89a63e03b3494ea77dc81a0f35d1e

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public interface IOutputModule
 {
-    void Activate();
+    void Activate(bool isStart);
 }
 
 public class SwitchInput : MonoBehaviour {
-    public static List<GameObject> switches;
+    public static List<GameObject> switches = new List<GameObject>();
 
     public Sprite OnSwitch;
     public Sprite OffSwitch;
@@ -40,9 +40,19 @@ public class SwitchInput : MonoBehaviour {
         return closestSoFar;
     }
 
+    public static void ActivateAll()
+    {
+        if (switches != null)
+        {
+            foreach (GameObject obj in switches)
+            {
+                obj.GetComponent<SwitchInput>().Trigger();
+            }
+        }
+    }
+
 	// Use this for initialization
 	void Start () {
-        //DontDestroyOnLoad(this);
         if(switches == null)
         {
             switches = new List<GameObject>();
@@ -51,27 +61,22 @@ public class SwitchInput : MonoBehaviour {
         updateSprite();
         switches.Add(this.gameObject);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     public void Trigger()
     {
-        if(Target1 != null)
+        this.activated = !this.activated;
+        if (Target1 != null)
         {
-            Target1.GetComponent<OuputBehavior>().Activate();
+            Target1.GetComponent<OuputBehavior>().Activate(activated);
         }
         if (Target2 != null)
         {
-            Target2.GetComponent<OuputBehavior>().Activate();
+            Target2.GetComponent<OuputBehavior>().Activate(activated);
         }
         if (Target3 != null)
         {
-            Target3.GetComponent<OuputBehavior>().Activate();
+            Target3.GetComponent<OuputBehavior>().Activate(activated);
         }
-        this.activated = !this.activated;
         updateSprite();
     }
 

@@ -219,6 +219,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BossCannonBehavior.cs" />
+    <Compile Include="Assets\Scripts\bossFireBehavior.cs" />
     <Compile Include="Assets\Scripts\BulletBehavior.cs" />
     <Compile Include="Assets\Scripts\ButtonBehavior.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
@@ -229,7 +231,10 @@
     <Compile Include="Assets\Scripts\FakeSpikeScript.cs" />
     <Compile Include="Assets\Scripts\GlobalMethods.cs" />
     <Compile Include="Assets\Scripts\GravityBehavior.cs" />
+    <Compile Include="Assets\Scripts\KillableEntityBehavior.cs" />
+    <Compile Include="Assets\Scripts\LaserBehavior.cs" />
     <Compile Include="Assets\Scripts\MaxVelocityBehavior.cs" />
+    <Compile Include="Assets\Scripts\MessageBehavior.cs" />
     <Compile Include="Assets\Scripts\MissileBehavior.cs" />
     <Compile Include="Assets\Scripts\NPCBehaviors\BasicBehaviorBehavior.cs" />
     <Compile Include="Assets\Scripts\NPCBehaviors\ChaseBehavior.cs" />
@@ -246,6 +251,7 @@
     <Compile Include="Assets\Scripts\SpinBehavior.cs" />
     <Compile Include="Assets\Scripts\StickyBehavior.cs" />
     <Compile Include="Assets\Scripts\SwitchInput.cs" />
+    <Compile Include="Assets\Scripts\TriggerOnDeathBehavior.cs" />
     <Compile Include="Assets\Scripts\TurretBehavior.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

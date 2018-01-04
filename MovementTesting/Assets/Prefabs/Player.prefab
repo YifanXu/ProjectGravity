@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathController: {fileID: 1940687274201754, guid: 3d9177ba0e7e4894a8137312e9c085d9,
     type: 2}
-  TriggerMaxDistance: 1.5
+  TriggerMaxDistance: 2
 --- !u!212 &212553081671242688
 SpriteRenderer:
   m_ObjectHideFlags: 1

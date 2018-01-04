@@ -25,7 +25,7 @@ public class ButtonBehavior : MonoBehaviour {
     void Update () {
 		if(extentionCount != -100 && extentionCount <= 0)
         {
-            Trigger();
+            Trigger(false);
             extentionCount = -100;
             this.GetComponent<SpriteRenderer>().sprite = unpressedButton;
         }
@@ -40,7 +40,7 @@ public class ButtonBehavior : MonoBehaviour {
         
         if (this.extentionCount == -100)
         {
-            Trigger();
+            Trigger(true);
         }
         this.extentionCount = -100;
         this.GetComponent<SpriteRenderer>().sprite = pressedButton;
@@ -52,19 +52,19 @@ public class ButtonBehavior : MonoBehaviour {
         extentionCount = extention;
     }
 
-    public void Trigger()
+    public void Trigger(bool isStart)
     {
         if (Target1 != null)
         {
-            Target1.GetComponent<OuputBehavior>().Activate();
+            Target1.GetComponent<OuputBehavior>().Activate(isStart);
         }
         if (Target2 != null)
         {
-            Target2.GetComponent<OuputBehavior>().Activate();
+            Target2.GetComponent<OuputBehavior>().Activate(isStart);
         }
         if (Target3 != null)
         {
-            Target3.GetComponent<OuputBehavior>().Activate();
+            Target3.GetComponent<OuputBehavior>().Activate(isStart);
         }
     }
 }

@@ -45,10 +45,10 @@ public class GravityBehavior : MonoBehaviour {
         
     }
 
-    public static void UpdateDirection(int rotationIndex, int change)
+    public static void UpdateDirection(int change)
     {
-        GravityBehavior.rotationIndex = rotationIndex;
-        direction = directions[((rotationIndex + 4000)% 4)];
+        GravityBehavior.rotationIndex += change;
+        direction = directions[(rotationIndex + 4000) % 4];
     }
 
     public static Vector2 TranslateDireciton(int index)

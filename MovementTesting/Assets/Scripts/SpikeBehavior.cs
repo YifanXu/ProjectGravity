@@ -21,7 +21,7 @@ public class SpikeBehavior : MonoBehaviour {
     {
         if (object.ReferenceEquals(collision.gameObject, PlayerInput.Player))
         {
-            PlayerInput.Die();
+            PlayerInput.Die("You just got some nice little holes on your body with spikes in them!");
         }
     }
 }

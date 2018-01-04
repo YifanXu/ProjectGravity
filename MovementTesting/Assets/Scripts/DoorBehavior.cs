@@ -30,7 +30,7 @@ public class DoorBehavior : MonoBehaviour, IOutputModule {
 		
 	}
 
-    public void Activate()  
+    public void Activate(bool isStart)  
     {
         this.Closed = !this.Closed;
         if (this.Closed)

@@ -6,6 +6,7 @@ using UnityEngine;
 
 public static class GlobalMethods
 {
+    
     public static Vector2 ToVector2 (this Vector3 original)
     {
         return new Vector2(original.x, original.y);

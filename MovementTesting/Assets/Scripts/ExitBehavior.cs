@@ -14,7 +14,7 @@ public class ExitBehavior : MonoBehaviour, IOutputModule {
 	// Use this for initialization
 	void Start () {
         this.accessible = !accessible;
-        this.Activate();
+        this.Activate(true);
 	}
 	
 	// Update is called once per frame
@@ -25,7 +25,6 @@ public class ExitBehavior : MonoBehaviour, IOutputModule {
     //
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Exiting");
         if(accessible && other.GetComponent<PlayerInput>() != null)
         {
            SwitchInput.ClearCache();
@@ -36,7 +35,6 @@ public class ExitBehavior : MonoBehaviour, IOutputModule {
 
     void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log("Exiting");
         if (accessible && other.GetComponent<PlayerInput>() != null)
         {
             SwitchInput.ClearCache();
@@ -45,7 +43,7 @@ public class ExitBehavior : MonoBehaviour, IOutputModule {
         }
     }
 
-    public void Activate()
+    public void Activate(bool isActive)
     {
         accessible = !accessible;
 

@@ -2,10 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OuputBehavior : MonoBehaviour
-{
-    
-    public Component component;
+public class bossFireBehavior : MonoBehaviour, IOutputModule {
 
 	// Use this for initialization
 	void Start () {
@@ -19,9 +16,9 @@ public class OuputBehavior : MonoBehaviour
 
     public void Activate(bool isStart)
     {
-        if(component is IOutputModule)
+        if (isStart)
         {
-            ((IOutputModule)component).Activate(isStart);
+            GetComponentInParent<BossCannonBehavior>().AttemptFire();
         }
     }
 }

@@ -27,18 +27,18 @@ public class PlayerInput : MonoBehaviour {
             var obj = SwitchInput.GetClosestSwitch(out dist);
             if (obj == null || dist > TriggerMaxDistance)
             {
-                Debug.Log("Nothing Found");
+                //I like debug lines!
             }
             else
             {
-                Debug.Log(obj.name);
                 obj.GetComponent<SwitchInput>().Trigger();
             }
         } 
 	}
 
-    public static void Die()
+    public static void Die(string message)
     {
-        Instantiate(Player.GetComponent<PlayerInput>().deathController);
+        var death = Instantiate(Player.GetComponent<PlayerInput>().deathController);
+        death.GetComponent<DeathControllerScript>().deathMessage = message;
     }
 }

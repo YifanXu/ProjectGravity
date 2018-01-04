@@ -23,7 +23,7 @@ public class SpinBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+    
         //MoveCamera
         float rotationAchieved = rotationLeft * lerpFactor;
         this.transform.Rotate(new Vector3(0, 0, rotationAchieved));
@@ -33,14 +33,14 @@ public class SpinBehavior : MonoBehaviour {
         {
             rotationLeft -= 90;
             rotationIndex--;
-            GravityBehavior.UpdateDirection(rotationIndex, -1);
+            GravityBehavior.UpdateDirection(-1);
             ResizeCamera();
         }
         if (Input.GetKeyUp(KeyCode.RightArrow))
         {
             rotationLeft += 90;
             rotationIndex++;
-            GravityBehavior.UpdateDirection(rotationIndex, 1);
+            GravityBehavior.UpdateDirection(1);
             ResizeCamera();
         }
         

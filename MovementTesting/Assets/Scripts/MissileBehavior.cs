@@ -57,7 +57,7 @@ public class MissileBehavior : MonoBehaviour {
     {
         if (collision.tag == "Player")
         {
-            PlayerInput.Die("A missile has hit you with a massive kinetic force. You died before it exploded.");
+            PlayerInput.Die("Missile explosion");
         }
         else if (collision.tag != "Ghost" && !collision.isTrigger)
         {

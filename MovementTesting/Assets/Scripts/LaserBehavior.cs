@@ -75,7 +75,7 @@ public class LaserBehavior : MonoBehaviour,IOutputModule {
     {
         if (collision.tag == "Player" && timer < shootTime && timer >= 0f)
         {
-            PlayerInput.Die("Somebody jumped into their own laser...");
+            PlayerInput.Die("Burned in own laser");
         }
     }
 

@@ -28,7 +28,7 @@ public class BulletBehavior : MonoBehaviour {
         {
             if (collision.tag == "Player")
             {
-                PlayerInput.Die("Please try to not swallow a bullet next time...");
+                PlayerInput.Die("A clean shot from unknown source");
                 return;
             }
             if (collision.tag == "Entity")

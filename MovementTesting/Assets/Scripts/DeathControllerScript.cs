@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+    
 public class DeathControllerScript : MonoBehaviour {
 
     private string level;
+    private static int deathCount = 0;
     public string startingLevel;
     public string deathMessage;
 
@@ -20,7 +21,7 @@ public class DeathControllerScript : MonoBehaviour {
         SceneManager.LoadScene("DeathScene");
         SwitchInput.ClearCache();
         GravityBehavior.ResetAll();
-        
+        deathCount++;
     }
 	
 	// Update is called once per frame
@@ -28,7 +29,8 @@ public class DeathControllerScript : MonoBehaviour {
 
         if(SceneManager.GetActiveScene().name == "DeathScene")
         {
-            MessageBehavior.message.GetComponent<Text>().text = this.deathMessage;
+            MessageBehavior.deathMessage.GetComponent<Text>().text = "Death Analysis: " + this.deathMessage;
+            MessageBehavior.deathCount.GetComponent<Text>().text = string.Format("Deaths: {0} (so far)", deathCount);
         }
 
 		if(Input.GetKeyDown(reviveKey))

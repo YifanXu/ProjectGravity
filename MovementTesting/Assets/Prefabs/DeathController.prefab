@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 975ede8de7aa9d94a819bca24903f1da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingLevel: Level1
+  startingLevel: LevelSelect
+  deathMessage: 
   reviveKey: 13
   resetKey: 27

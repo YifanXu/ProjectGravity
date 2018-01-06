@@ -93,7 +93,7 @@ MonoBehaviour:
   initialVelocity: 0
   acceleration: 0.5
   maxTurningRadius: 1
-  turningChange: 0.5
+  turningChange: 0.3
   currentTurn: 0
 --- !u!212 &212980193592948598
 SpriteRenderer:

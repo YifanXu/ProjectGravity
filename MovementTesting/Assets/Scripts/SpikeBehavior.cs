@@ -17,11 +17,11 @@ public class SpikeBehavior : MonoBehaviour {
 		
 	}
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(object.ReferenceEquals(other.gameObject,PlayerInput.Player))
+        if (object.ReferenceEquals(collision.gameObject, PlayerInput.Player))
         {
-            SceneManager.LoadScene(DeathSceneName);
+            PlayerInput.Die("Penetrated by spikes");
         }
     }
 }

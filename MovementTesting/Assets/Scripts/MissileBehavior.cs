@@ -57,7 +57,7 @@ public class MissileBehavior : MonoBehaviour {
     {
         if (collision.tag == "Player")
         {
-            PlayerInput.Die();
+            PlayerInput.Die("Missile explosion");
         }
         else if (collision.tag != "Ghost" && !collision.isTrigger)
         {

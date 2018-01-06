@@ -35,12 +35,10 @@ public class ShifterBehavior : MonoBehaviour {
     {
         if (timer < activationDelay)
         {
-            Debug.Log("Cancel Activation");
             timer = activationDelay;
         }
         else
         {
-            Debug.Log("Activation");
             timer -= Time.deltaTime;
         }
     }

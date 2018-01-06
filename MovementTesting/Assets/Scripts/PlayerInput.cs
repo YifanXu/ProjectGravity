@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerInput : MonoBehaviour {
 
+    public GameObject deathController = null;
     public static GameObject Player;
 
     public float TriggerMaxDistance;
@@ -26,18 +27,18 @@ public class PlayerInput : MonoBehaviour {
             var obj = SwitchInput.GetClosestSwitch(out dist);
             if (obj == null || dist > TriggerMaxDistance)
             {
-                Debug.Log("Nothing Found");
+                //I like debug lines!
             }
             else
             {
-                Debug.Log(obj.name);
                 obj.GetComponent<SwitchInput>().Trigger();
             }
         } 
 	}
 
-    public static void Die()
+    public static void Die(string message)
     {
-        SceneManager.LoadScene("DeathScene");
+        var death = Instantiate(Player.GetComponent<PlayerInput>().deathController);
+        death.GetComponent<DeathControllerScript>().deathMessage = message;
     }
 }

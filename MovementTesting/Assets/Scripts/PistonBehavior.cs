@@ -55,9 +55,8 @@ public class PistonBehavior : MonoBehaviour, IOutputModule
         rod.transform.localScale = new Vector3(rod.transform.localScale.x, Mathf.Abs(basePos.y - headPos.y) - 0.25f, 1);
     }
 
-    public void Activate()
+    public void Activate(bool isStart)
     {
-        Debug.Log("Piston Activated");
         this.activated = !activated;
     }
 }

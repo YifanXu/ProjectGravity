@@ -17,11 +17,11 @@ public class OuputBehavior : MonoBehaviour
 		
 	}
 
-    public void Activate()
+    public void Activate(bool isStart)
     {
         if(component is IOutputModule)
         {
-            ((IOutputModule)component).Activate();
+            ((IOutputModule)component).Activate(isStart);
         }
     }
 }

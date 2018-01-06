@@ -12,8 +12,17 @@ public class DoorBehavior : MonoBehaviour, IOutputModule {
 
 	// Use this for initialization
 	void Start () {
-        this.Closed = !this.Closed;
-        this.Activate();
+        if (this.Closed)
+        {
+            this.GetComponent<SpriteRenderer>().color = closedMaterial.color;
+            this.GetComponent<Collider2D>().isTrigger = false;
+        }
+        else
+        {
+            this.GetComponent<SpriteRenderer>().color = opendMaterial.color;
+            this.GetComponent<Collider2D>().isTrigger = true;
+
+        }
     }
 	
 	// Update is called once per frame
@@ -21,18 +30,19 @@ public class DoorBehavior : MonoBehaviour, IOutputModule {
 		
 	}
 
-    public void Activate()  
+    public void Activate(bool isStart)  
     {
+        this.Closed = !this.Closed;
         if (this.Closed)
-        {
-            this.GetComponent<SpriteRenderer>().color = opendMaterial.color;
-            this.GetComponent<Collider2D>().isTrigger = true;
-        }
-        else
         {
             this.GetComponent<SpriteRenderer>().color = closedMaterial.color;
             this.GetComponent<Collider2D>().isTrigger = false;
         }
-        this.Closed = !this.Closed;
+        else
+        {
+            this.GetComponent<SpriteRenderer>().color = opendMaterial.color;
+            this.GetComponent<Collider2D>().isTrigger = true;
+            
+        }
     }
 }

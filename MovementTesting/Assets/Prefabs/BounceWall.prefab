@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4484130741201398}
   - component: {fileID: 212695317838017164}
   - component: {fileID: 61908545125966750}
+  - component: {fileID: 114401973859391506}
   m_Layer: 0
   m_Name: BouncePad
   m_TagString: Stage
@@ -38,6 +39,7 @@ GameObject:
   - component: {fileID: 4460855266611304}
   - component: {fileID: 212830712506900714}
   - component: {fileID: 61688249289787414}
+  - component: {fileID: 114137318913879518}
   m_Layer: 0
   m_Name: BouncePad (3)
   m_TagString: Stage
@@ -55,6 +57,7 @@ GameObject:
   - component: {fileID: 4942948092675480}
   - component: {fileID: 212390457181563554}
   - component: {fileID: 61612978954858286}
+  - component: {fileID: 114335392551629776}
   m_Layer: 0
   m_Name: BouncePad (1)
   m_TagString: Stage
@@ -72,6 +75,7 @@ GameObject:
   - component: {fileID: 4457455850134828}
   - component: {fileID: 212415717735935588}
   - component: {fileID: 61236062275463012}
+  - component: {fileID: 114398553783316558}
   m_Layer: 0
   m_Name: BouncePad (2)
   m_TagString: Stage
@@ -290,6 +294,50 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114137318913879518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1252405093269522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9347de1c84704a542bd1a08d0600498b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114335392551629776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1432867148735636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9347de1c84704a542bd1a08d0600498b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114398553783316558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1880733087366176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9347de1c84704a542bd1a08d0600498b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114401973859391506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1038543235026164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9347de1c84704a542bd1a08d0600498b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212390457181563554
 SpriteRenderer:
   m_ObjectHideFlags: 1

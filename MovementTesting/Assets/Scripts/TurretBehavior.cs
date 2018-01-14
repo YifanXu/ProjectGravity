@@ -63,6 +63,7 @@ public class TurretBehavior : MonoBehaviour {
         {
             newBullet.GetComponent<MissileBehavior>().target = this.target;
         }
+
     }
 
     public float targetEuler
@@ -72,7 +73,7 @@ public class TurretBehavior : MonoBehaviour {
             if(AimMouse)
             {
                 return GlobalMethods.Get2DEulerAngle(this.transform.position, GlobalMethods.MousePoint);
-            }
+            } 
             if(target == null)
             {
                 return GetComponentInParent<Transform>().eulerAngles.z;

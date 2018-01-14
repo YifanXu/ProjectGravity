@@ -247,6 +247,7 @@
     <Compile Include="Assets\Scripts\PlatformDetectorBehavior.cs" />
     <Compile Include="Assets\Scripts\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
+    <Compile Include="Assets\Scripts\ProjectExclusionTag.cs" />
     <Compile Include="Assets\Scripts\RotatingBehavior.cs" />
     <Compile Include="Assets\Scripts\ShifterBehavior.cs" />
     <Compile Include="Assets\Scripts\SpikeBehavior.cs" />

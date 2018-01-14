@@ -59,6 +59,10 @@ public class MissileBehavior : MonoBehaviour {
         {
             PlayerInput.Die("Missile explosion");
         }
+        else if(collision.GetComponent<ProjectExclusionTag>() != null)
+        {
+            this.GetComponent<Rigidbody2D>().velocity = -this.GetComponent<Rigidbody2D>().velocity;
+        }
         else if (collision.tag != "Ghost" && !collision.isTrigger)
         {
             Destroy(this.gameObject);

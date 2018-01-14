@@ -31,7 +31,7 @@ public class ChaseBehavior : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Player")
         {
-            PlayerInput.Die("The Rouge Cube has entered your mind, and you are too now a rouge cube.");
+            //PlayerInput.Die("The Rouge Cube has entered your mind, and you are too now a rouge cube.");
         }
     }
 }

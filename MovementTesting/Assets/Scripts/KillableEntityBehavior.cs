@@ -7,7 +7,7 @@ public class KillableEntityBehavior : MonoBehaviour {
     public float maxHealth = 3f;
     private float health;
 
-    
+    public GameObject killWith;
     public Color dyingColor = new Color(255,0,0);
 
 	// Use this for initialization
@@ -36,8 +36,8 @@ public class KillableEntityBehavior : MonoBehaviour {
         Debug.Log(string.Format("{0} was damaged with {1} health, {2} remaining. Color = ({3},{4},{5},{6}", this.gameObject.name, amount, health,current.r,current.g,current.b,current.a));
         this.GetComponent<SpriteRenderer>().color = current;
 
-        var behaviorInParent = GetComponentInParent<KillableEntityBehavior>();
-        //if(behaviorInParent != null)
+        //var behaviorInParent = GetComponentInParent<KillableEntityBehavior>();
+        //if (behaviorInParent != null)
         //{
         //    behaviorInParent.Damage(amount);
         //}
@@ -45,6 +45,10 @@ public class KillableEntityBehavior : MonoBehaviour {
 
     public void Kill()
     {
+        if (killWith != null)
+        {
+            Destroy(killWith);
+        }
         var deathScript = this.GetComponent<TriggerOnDeathBehavior>();
         if(deathScript != null)
         {

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ExitBehavior : MonoBehaviour, IOutputModule {
 
     public string SceneName;
+    public int thisLevel;
     public bool accessible;
 
     public Sprite enabledSprite;
@@ -27,9 +28,7 @@ public class ExitBehavior : MonoBehaviour, IOutputModule {
     {
         if(accessible && other.GetComponent<PlayerInput>() != null)
         {
-           SwitchInput.ClearCache();
-           GravityBehavior.ResetAll();
-           SceneManager.LoadScene(SceneName);
+            PassLevel();
         }
     }
 
@@ -37,9 +36,7 @@ public class ExitBehavior : MonoBehaviour, IOutputModule {
     {
         if (accessible && other.GetComponent<PlayerInput>() != null)
         {
-            SwitchInput.ClearCache();
-            GravityBehavior.ResetAll();
-            SceneManager.LoadScene(SceneName);
+            PassLevel();
         }
     }
 
@@ -55,5 +52,16 @@ public class ExitBehavior : MonoBehaviour, IOutputModule {
         {
             this.GetComponent<SpriteRenderer>().sprite = disabledSprite;
         }
+    }
+
+    private void PassLevel()
+    {
+        if (thisLevel > PlayerPrefs.GetInt("LevelReached", 1))
+        {
+            PlayerPrefs.SetInt("LevelReached", thisLevel);
+        }
+        SwitchInput.ClearCache();
+        GravityBehavior.ResetAll();
+        SceneManager.LoadScene(SceneName);
     }
 }

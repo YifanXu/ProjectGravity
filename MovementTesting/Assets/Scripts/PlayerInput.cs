@@ -7,6 +7,7 @@ public class PlayerInput : MonoBehaviour {
 
     public GameObject deathController = null;
     public static GameObject Player;
+    public string MenuScene = "LevelSelect";
 
     public float TriggerMaxDistance;
 
@@ -34,6 +35,11 @@ public class PlayerInput : MonoBehaviour {
                 obj.GetComponent<SwitchInput>().Trigger();
             }
         } 
+
+        if(Input.GetKeyUp(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(MenuScene);  
+        }
 	}
 
     public static void Die(string message)

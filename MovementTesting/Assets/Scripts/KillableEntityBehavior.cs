@@ -6,8 +6,10 @@ public class KillableEntityBehavior : MonoBehaviour {
 
     public float maxHealth = 3f;
     private float health;
+    public float healthDrain = 0f;
 
     public GameObject killWith;
+    public GameObject killParticle;
     public Color dyingColor = new Color(255,0,0);
 
 	// Use this for initialization
@@ -17,7 +19,7 @@ public class KillableEntityBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        Damage(healthDrain * Time.deltaTime);
 	}
 
     public void Damage(float amount)
@@ -45,6 +47,8 @@ public class KillableEntityBehavior : MonoBehaviour {
 
     public void Kill()
     {
+        killParticle.SetActive(true);
+        killParticle.transform.position = this.transform.position;
         if (killWith != null)
         {
             Destroy(killWith);

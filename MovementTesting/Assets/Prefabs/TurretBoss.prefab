@@ -184,7 +184,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4441516592296034}
   - component: {fileID: 114518396402803182}
-  - component: {fileID: 114843192632132950}
   m_Layer: 0
   m_Name: TurretBoss
   m_TagString: Ghost
@@ -696,7 +695,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -721,7 +720,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -746,7 +745,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -771,7 +770,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -823,6 +822,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -5
+  offSpeed: 0
+  activated: 1
 --- !u!114 &114374377483174292
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -864,6 +865,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  healthDrain: 0
+  killWith: {fileID: 1882347125084422}
+  killParticle: {fileID: 0}
   dyingColor: {r: 255, g: 0, b: 0, a: 1}
 --- !u!114 &114496341847404874
 MonoBehaviour:
@@ -889,6 +893,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  offSpeed: 0
+  activated: 1
 --- !u!114 &114610678918453118
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -925,19 +931,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathSceneName: DeathScene
---- !u!114 &114843192632132950
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1882347125084422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a61408271ba6d044b2f473bb72cf5c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 3
-  dyingColor: {r: 255, g: 0, b: 0, a: 1}
 --- !u!114 &114928599408579838
 MonoBehaviour:
   m_ObjectHideFlags: 1

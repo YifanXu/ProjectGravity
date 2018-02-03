@@ -22,6 +22,11 @@ public class TurretBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if(this.target == null)
+        {
+            target = PlayerInput.Player;
+        }
+
         this.transform.eulerAngles = this.transform.eulerAngles.z.StandarizeEuler().GetRotation();
         float currentEuler = this.transform.eulerAngles.z;
         currentEuler = this.transform.eulerAngles.z;

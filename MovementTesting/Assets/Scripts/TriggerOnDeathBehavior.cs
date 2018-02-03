@@ -9,7 +9,7 @@ public class TriggerOnDeathBehavior : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-	}
+	} 
 	
 	// Update is called once per frame
 	void Update () {
@@ -18,7 +18,10 @@ public class TriggerOnDeathBehavior : MonoBehaviour {
 
     public void Die()
     {
-        target.GetComponent<OuputBehavior>().Activate(true);
+        if (target != null)
+        {
+            target.GetComponent<OuputBehavior>().Activate(true);
+        }
         Destroy(this.gameObject);
     }
 }

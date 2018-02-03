@@ -40,8 +40,14 @@ public class BasicBehaviorBehavior : MonoBehaviour {
         {
             this.GetComponent<SpriteRenderer>().flipX = !this.GetComponent<SpriteRenderer>().flipX;
             index += 2;
-            wallDetector.GetComponent<Collider2D>().offset = -wallDetector.GetComponent<Collider2D>().offset;
-            edgeDetector.GetComponent<Collider2D>().offset = new Vector2(-edgeDetector.GetComponent<Collider2D>().offset.x, edgeDetector.GetComponent<Collider2D>().offset.y);
+            if (wallDetector != null)
+            {
+                wallDetector.GetComponent<Collider2D>().offset = -wallDetector.GetComponent<Collider2D>().offset;
+            }
+            if (edgeDetector)
+            {
+                edgeDetector.GetComponent<Collider2D>().offset = new Vector2(-edgeDetector.GetComponent<Collider2D>().offset.x, edgeDetector.GetComponent<Collider2D>().offset.y);
+            }
             graceTimer = 0f;
         }
     }
@@ -49,7 +55,10 @@ public class BasicBehaviorBehavior : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision)
     {
         this.transform.rotation = new Quaternion(0, 0, 0, 0);
-        int index = this.GetComponent<GravityBehavior>().privateIndex;
-        this.transform.Rotate(new Vector3(0, 0, 90f * (index % 4)));
+        if (this.GetComponent<GravityBehavior>() != null)
+        {
+            int index = this.GetComponent<GravityBehavior>().privateIndex;
+            this.transform.Rotate(new Vector3(0, 0, 90f * (index % 4)));
+        }
     }
 }

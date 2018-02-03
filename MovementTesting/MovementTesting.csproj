@@ -249,10 +249,12 @@
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\ProjectExclusionTag.cs" />
     <Compile Include="Assets\Scripts\RotatingBehavior.cs" />
+    <Compile Include="Assets\Scripts\SelfDestruction.cs" />
     <Compile Include="Assets\Scripts\ShifterBehavior.cs" />
     <Compile Include="Assets\Scripts\SpikeBehavior.cs" />
     <Compile Include="Assets\Scripts\SpinBehavior.cs" />
     <Compile Include="Assets\Scripts\StickyBehavior.cs" />
+    <Compile Include="Assets\Scripts\StickyCube.cs" />
     <Compile Include="Assets\Scripts\SwitchInput.cs" />
     <Compile Include="Assets\Scripts\TriggerOnDeathBehavior.cs" />
     <Compile Include="Assets\Scripts\TurretBehavior.cs" />

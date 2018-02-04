@@ -24,4 +24,12 @@ public class SpikeBehavior : MonoBehaviour {
             PlayerInput.Die("Penetrated by spikes");
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (object.ReferenceEquals(collision.gameObject, PlayerInput.Player))
+        {
+            PlayerInput.Die("Penetrated by spikes");
+        }
+    }
 }

@@ -47,8 +47,11 @@ public class KillableEntityBehavior : MonoBehaviour {
 
     public void Kill()
     {
-        killParticle.SetActive(true);
-        killParticle.transform.position = this.transform.position;
+        if (killParticle != null)
+        {
+            killParticle.SetActive(true);
+            killParticle.transform.position = this.transform.position;
+        }
         if (killWith != null)
         {
             Destroy(killWith);

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SpikeBehavior : MonoBehaviour {
 
     public string DeathSceneName;
+    public float primeTimer = 0f;
 
 	// Use this for initialization
 	void Start () {
@@ -14,8 +15,19 @@ public class SpikeBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(primeTimer > 0f)
+        {
+            primeTimer -= Time.deltaTime;
+        }
 	}
+
+    public bool primed
+    {
+        get
+        {
+            return primeTimer <= 0f;
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

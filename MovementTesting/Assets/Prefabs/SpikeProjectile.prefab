@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathSceneName: DeathScene
+  primeTimer: 0.5
 --- !u!114 &114645039765907496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -132,6 +133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 4
   healthDrain: 1
+  SpikeDamage: 1
+  invincible: 1
   killWith: {fileID: 0}
   killParticle: {fileID: 0}
   dyingColor: {r: 255, g: 0, b: 0, a: 1}

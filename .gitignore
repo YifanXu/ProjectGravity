@@ -90,7 +90,7 @@ ipch/
 *.vspx
 *.sap
 
-# TFS 2012 Local Workspace
+*.suo# TFS 2012 Local Workspace
 $tf/
 
 # Guidance Automation Toolkit

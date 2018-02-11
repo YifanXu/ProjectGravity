@@ -373,6 +373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathSceneName: DeathScene
+  primeTimer: 0
 --- !u!60 &130720690
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -869,6 +870,21 @@ Prefab:
       value: 
       objectReference: {fileID: 1361460802974090, guid: 85ba30681fdaab74cbbc52f5e503dfe9,
         type: 2}
+    - target: {fileID: 114867559822400122, guid: a8b5c1988f75f434cb723029debff682,
+        type: 2}
+      propertyPath: colorGivenHealth.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114867559822400122, guid: a8b5c1988f75f434cb723029debff682,
+        type: 2}
+      propertyPath: colorGivenHealth.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114867559822400122, guid: a8b5c1988f75f434cb723029debff682,
+        type: 2}
+      propertyPath: colorGivenHealth.key0.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a8b5c1988f75f434cb723029debff682, type: 2}
   m_IsPrefabParent: 0
@@ -923,6 +939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathSceneName: DeathScene
+  primeTimer: 0
 --- !u!60 &541431919
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1047,6 +1064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathSceneName: DeathScene
+  primeTimer: 0
 --- !u!60 &607004437
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1503,6 +1521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathSceneName: DeathScene
+  primeTimer: 0
 --- !u!60 &1021021084
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1762,6 +1781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathSceneName: DeathScene
+  primeTimer: 0
 --- !u!60 &1284689414
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1992,6 +2012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathSceneName: DeathScene
+  primeTimer: 0
 --- !u!60 &1484548816
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2158,6 +2179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathSceneName: DeathScene
+  primeTimer: 0
 --- !u!60 &1567792343
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2597,6 +2619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathSceneName: DeathScene
+  primeTimer: 0
 --- !u!60 &1763192234
 PolygonCollider2D:
   m_ObjectHideFlags: 0

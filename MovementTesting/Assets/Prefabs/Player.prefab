@@ -123,7 +123,7 @@ MonoBehaviour:
   ClickMove: 0
   speed: 20
   jumpForceMultiplier: 10
-  canMove: 1
+  canMove: 0
   jumpCoolDown: 0.5
   cdTracker: 0
 --- !u!114 &114620838050186742
@@ -139,7 +139,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathController: {fileID: 1940687274201754, guid: 3d9177ba0e7e4894a8137312e9c085d9,
     type: 2}
-  TriggerMaxDistance: 2
+  MenuScene: LevelSelect
+  TriggerMaxDistance: 1.5
 --- !u!212 &212553081671242688
 SpriteRenderer:
   m_ObjectHideFlags: 1

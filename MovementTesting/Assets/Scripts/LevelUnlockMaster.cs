@@ -19,15 +19,15 @@ public class LevelUnlockMaster : MonoBehaviour {
 
     public void ResetAll()
     {
-        PlayerPrefs.SetInt("LevelReached", 1);
+        PlayerPrefs.SetInt("LevelAccessible", 1);
         LoadButtons();
     }
 
     private void LoadButtons()
     {
-        int levelReached = PlayerPrefs.GetInt("LevelReached", 1);
+        int LevelAccessible = PlayerPrefs.GetInt("LevelAccessible", 1);
 
-        for (int i = levelReached; i < buttons.Length; i++)
+        for (int i = LevelAccessible; i < buttons.Length; i++)
         {
             buttons[i].GetComponent<Button>().interactable = false;
         }

@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/FinalLevels/LevelSelect.unity
     guid: ba6160e28dced5b478819030fb72959d
   - enabled: 1
-    path: Assets/FinalLevels/Level1.unity
+    path: Assets/FinalLevels/Level 1.unity
     guid: 068c83aa50b65f64c8f105f2de8831dc
   - enabled: 1
     path: Assets/FinalLevels/Level 2.unity
@@ -47,6 +47,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/FinalLevels/Level 13.unity
     guid: a6ac05d7717e39f45af396dd68ed619c
+  - enabled: 1
+    path: Assets/FinalLevels/FourthBoss.unity
+    guid: 5a6654781576ba74cb8f9ef75d891eee
   - enabled: 1
     path: Assets/FinalLevels/BonusLevel.unity
     guid: db2259c9ba8536f4493b13e8312437f2

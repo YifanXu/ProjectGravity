@@ -7,6 +7,8 @@ public class KillableEntityBehavior : MonoBehaviour {
     public float maxHealth = 3f;
     private float health;
     public float healthDrain = 0f;
+    public float SpikeDamage = 1f;
+    public bool invincible = false;
 
     public GameObject killWith;
     public GameObject killParticle;
@@ -47,8 +49,11 @@ public class KillableEntityBehavior : MonoBehaviour {
 
     public void Kill()
     {
-        killParticle.SetActive(true);
-        killParticle.transform.position = this.transform.position;
+        if (killParticle != null)
+        {
+            killParticle.SetActive(true);
+            killParticle.transform.position = this.transform.position;
+        }
         if (killWith != null)
         {
             Destroy(killWith);
@@ -61,6 +66,26 @@ public class KillableEntityBehavior : MonoBehaviour {
         else
         {
             Destroy(this.gameObject);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        var spike = collision.gameObject.GetComponent<SpikeBehavior>();
+        if (spike != null && spike.primed && !invincible)
+        {
+            this.health -= SpikeDamage;
+            Destroy(collision.gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var spike = collision.GetComponent<SpikeBehavior>();
+        if (spike != null && spike.primed && !invincible)
+        {
+            this.health -= SpikeDamage;
+            Destroy(collision.gameObject);
         }
     }
 }

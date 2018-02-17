@@ -48,6 +48,9 @@ EditorBuildSettings:
     path: Assets/FinalLevels/Level 13.unity
     guid: a6ac05d7717e39f45af396dd68ed619c
   - enabled: 1
+    path: Assets/FinalLevels/ThirdBoss.unity
+    guid: c613d428192460d4ab3155bd085a639e
+  - enabled: 1
     path: Assets/FinalLevels/FourthBoss.unity
     guid: 5a6654781576ba74cb8f9ef75d891eee
   - enabled: 1

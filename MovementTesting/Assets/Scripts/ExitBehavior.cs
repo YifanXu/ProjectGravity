@@ -56,9 +56,9 @@ public class ExitBehavior : MonoBehaviour, IOutputModule {
 
     private void PassLevel()
     {
-        if (thisLevel > PlayerPrefs.GetInt("LevelReached", 1))
+        if (thisLevel >= PlayerPrefs.GetInt("LevelAccessible", 1))
         {
-            PlayerPrefs.SetInt("LevelReached", thisLevel);
+            PlayerPrefs.SetInt("LevelAccessible", thisLevel + 1);
         }
         SwitchInput.ClearCache();
         GravityBehavior.ResetAll();

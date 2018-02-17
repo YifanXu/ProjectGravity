@@ -20,6 +20,8 @@ public class MenuControllerBehavior : MonoBehaviour {
 
     public void PlayScene(string name)
     {
+        GravityBehavior.ResetAll();
+        SwitchInput.switches = new List<GameObject>();
         SceneManager.LoadScene(name);
     }
 }

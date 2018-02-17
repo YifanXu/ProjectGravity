@@ -178,10 +178,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eec977495b663c45a966366ad698c63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpikeTravelSpeed: 1.5
+  SpikeTravelSpeed: 2
   SpikeDirection: -1
   LeftRight: -1
-  TravelTime: 7
+  TravelTime: 6.5
   FiringInterval: 0
   Timer: 0
   OriginalPosX: 0
@@ -224,10 +224,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eec977495b663c45a966366ad698c63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpikeTravelSpeed: 1.5
+  SpikeTravelSpeed: 2
   SpikeDirection: -1
   LeftRight: 0
-  TravelTime: 7
+  TravelTime: 6
   FiringInterval: 0
   Timer: 0
   OriginalPosX: 0
@@ -377,10 +377,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eec977495b663c45a966366ad698c63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpikeTravelSpeed: 1.5
+  SpikeTravelSpeed: 2
   SpikeDirection: 1
   LeftRight: -1
-  TravelTime: 7
+  TravelTime: 6
   FiringInterval: 0
   Timer: 0
   OriginalPosX: 0

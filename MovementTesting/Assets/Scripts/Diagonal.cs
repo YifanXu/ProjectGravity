@@ -46,4 +46,5 @@ public class Diagonal : MonoBehaviour {
 			Timer = 0f;
 		}
 	}
+} 
 

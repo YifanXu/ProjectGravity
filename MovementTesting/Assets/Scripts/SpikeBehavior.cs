@@ -8,6 +8,8 @@ public class SpikeBehavior : MonoBehaviour {
     public string DeathSceneName;
     public float primeTimer = 0f;
 
+    public bool indestructable;
+
 	// Use this for initialization
 	void Start () {
 		

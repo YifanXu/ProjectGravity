@@ -31,9 +31,10 @@ public class BulletBehavior : MonoBehaviour {
                 PlayerInput.Die("A clean shot from unknown source");
                 return;
             }
-            if (collision.tag == "Entity")
+            if (collision.GetComponent<KillableEntityBehavior>() != null)
             {
-
+                collision.GetComponent<KillableEntityBehavior>().Damage(1);
+                Destroy(this.gameObject);
             }
             else
             {

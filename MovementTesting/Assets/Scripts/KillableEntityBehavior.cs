@@ -79,7 +79,10 @@ public class KillableEntityBehavior : MonoBehaviour {
         if (spike != null && spike.primed && !invincible)
         {
             this.health -= SpikeDamage;
-            Destroy(collision.gameObject);
+            if (!spike.indestructable)
+            {
+                Destroy(collision.gameObject);
+            }
         }
     }
 }

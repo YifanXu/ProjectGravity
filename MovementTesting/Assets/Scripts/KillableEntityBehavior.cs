@@ -78,7 +78,7 @@ public class KillableEntityBehavior : MonoBehaviour {
         var spike = collision.GetComponent<SpikeBehavior>();
         if (spike != null && spike.primed && !invincible)
         {
-            this.health -= SpikeDamage;
+            Damage(SpikeDamage);
             if (!spike.indestructable)
             {
                 Destroy(collision.gameObject);

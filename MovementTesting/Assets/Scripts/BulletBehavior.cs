@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletBehavior : MonoBehaviour {
-
+    public GameObject parentObject;
     public Vector2 initialVelocity;
     public float speed;
 
@@ -31,7 +31,7 @@ public class BulletBehavior : MonoBehaviour {
                 PlayerInput.Die("A clean shot from unknown source");
                 return;
             }
-            if (collision.GetComponent<KillableEntityBehavior>() != null)
+            if (collision.GetComponent<KillableEntityBehavior>() != null && collision.gameObject != parentObject)
             {
                 collision.GetComponent<KillableEntityBehavior>().Damage(1);
                 Destroy(this.gameObject);

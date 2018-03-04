@@ -65,7 +65,10 @@ public class TurretBehavior : MonoBehaviour {
         {
             newBullet.GetComponent<MissileBehavior>().target = this.target;
         }
-
+        if (newBullet.GetComponent<BulletBehavior>() != null)
+        {
+            newBullet.GetComponent<BulletBehavior>().parentObject = this.gameObject;
+        }
     }
 
     public float targetEuler

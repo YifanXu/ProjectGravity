@@ -6,6 +6,9 @@ public class TriggerOnDeathBehavior : MonoBehaviour {
 
     public GameObject target;
 
+    public GameObject damageTarget;
+    public float damage = 1f;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -21,6 +24,11 @@ public class TriggerOnDeathBehavior : MonoBehaviour {
         if (target != null)
         {
             target.GetComponent<OuputBehavior>().Activate(true);
+        }
+
+        if(damageTarget != null)
+        {
+            damageTarget.GetComponent<KillableEntityBehavior>().Damage(damage);
         }
         Destroy(this.gameObject);
     }

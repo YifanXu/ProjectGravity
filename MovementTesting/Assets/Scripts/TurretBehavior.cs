@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TurretBehavior : MonoBehaviour {
-
-    public bool AimMouse;
     public GameObject target;
 
     public GameObject bullet;
@@ -29,7 +27,6 @@ public class TurretBehavior : MonoBehaviour {
 
         this.transform.eulerAngles = this.transform.eulerAngles.z.StandarizeEuler().GetRotation();
         float currentEuler = this.transform.eulerAngles.z;
-        currentEuler = this.transform.eulerAngles.z;
         float end = targetEuler.StandarizeEuler();
         if ((end - currentEuler < 180 && end - currentEuler > 0) || end - currentEuler < -180)
         {
@@ -68,24 +65,23 @@ public class TurretBehavior : MonoBehaviour {
         {
             newBullet.GetComponent<MissileBehavior>().target = this.target;
         }
-
+        if (newBullet.GetComponent<BulletBehavior>() != null)
+        {
+            newBullet.GetComponent<BulletBehavior>().parentObject = this.gameObject;
+        }
     }
 
     public float targetEuler
     {
         get
         {
-            if(AimMouse)
-            {
-                return GlobalMethods.Get2DEulerAngle(this.transform.position, GlobalMethods.MousePoint);
-            } 
             if(target == null)
             {
                 return GetComponentInParent<Transform>().eulerAngles.z;
             }
             else
             {
-                return GlobalMethods.Get2DEulerAngle(this.transform.position , target.transform.position);
+                return GlobalMethods.Get2DEulerAngle(this.transform.position, target.transform.position);
             }
         }
     }

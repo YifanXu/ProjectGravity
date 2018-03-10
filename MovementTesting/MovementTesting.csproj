@@ -227,6 +227,8 @@
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\ColliderTrigger.cs" />
     <Compile Include="Assets\Scripts\DeathControllerScript.cs" />
+    <Compile Include="Assets\Scripts\DestroyMS.cs" />
+    <Compile Include="Assets\Scripts\Diagonal.cs" />
     <Compile Include="Assets\Scripts\DoorBehavior.cs" />
     <Compile Include="Assets\Scripts\ExitBehavior.cs" />
     <Compile Include="Assets\Scripts\FakeSpikeScript.cs" />
@@ -260,6 +262,7 @@
     <Compile Include="Assets\Scripts\StickyBehavior.cs" />
     <Compile Include="Assets\Scripts\StickyCube.cs" />
     <Compile Include="Assets\Scripts\SwitchInput.cs" />
+    <Compile Include="Assets\Scripts\TouchKillScript.cs" />
     <Compile Include="Assets\Scripts\TriggerOnDeathBehavior.cs" />
     <Compile Include="Assets\Scripts\TurretBehavior.cs" />
   </ItemGroup>

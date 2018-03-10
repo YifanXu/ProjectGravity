@@ -1604,6 +1604,10 @@ Prefab:
       propertyPath: m_Name
       value: ExplosionParticles
       objectReference: {fileID: 0}
+    - target: {fileID: 1833148987581684, guid: 972d3b0567f34e946aebc3d97759388c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 972d3b0567f34e946aebc3d97759388c, type: 2}
   m_IsPrefabParent: 0

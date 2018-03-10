@@ -32,11 +32,13 @@ public class Boss3Sc1 : MonoBehaviour {
 				psObjs [1].SetActive (true);
 				GravityBehavior.UpdateDirection (2);
 				GravityDirectionNum = 1;
+                GravityBehavior.objectInverted = true;
 			} else if (GravityDirectionNum == 1) {
 				GravityBehavior.UpdateDirection (2);
 				psObjs [1].SetActive (false);
 				psObjs [0].SetActive (true);
 				GravityDirectionNum = 0;
+                GravityBehavior.objectInverted = false;
 			}
 
 			

@@ -10,8 +10,10 @@ public class GravityBehavior : MonoBehaviour {
     public int privateIndex;
     public static Vector2[] directions = new Vector2[] { Vector2.down, Vector2.right, Vector2.up, Vector2.left };
 
-    public bool enabled;
     public bool rotateUponChange = false;
+
+    public static bool objectInverted = false;
+    private bool privateObjectInverted = false;
 
 	// Use this for initialization
 	void Start () {
@@ -22,7 +24,7 @@ public class GravityBehavior : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (enabled)
+        if (enabled && speed != 0f)
         {
             this.GetComponent<Rigidbody2D>().AddForce(direction * speed);
         }
@@ -43,6 +45,12 @@ public class GravityBehavior : MonoBehaviour {
             this.privateIndex--;
         }
         
+
+        if(privateObjectInverted != objectInverted)
+        {
+            privateObjectInverted = objectInverted;
+            this.transform.Rotate(new Vector3(0, 0, 180));
+        }
     }
 
     public static void UpdateDirection(int change)
@@ -65,4 +73,6 @@ public class GravityBehavior : MonoBehaviour {
         rotationIndex = 0;
         direction = Vector2.down;
     }
+
+
 }

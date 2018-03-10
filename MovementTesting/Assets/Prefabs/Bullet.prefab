@@ -89,9 +89,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f39ebd1e39a21b4986ec3639e4869c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentObject: {fileID: 0}
   initialVelocity: {x: 0, y: 0}
   speed: 5
-  gracePeriod: 1
+  gracePeriod: 0.04
 --- !u!212 &212913159869563688
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -374,6 +374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathSceneName: DeathScene
   primeTimer: 0
+  indestructable: 0
 --- !u!60 &130720690
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -940,6 +941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathSceneName: DeathScene
   primeTimer: 0
+  indestructable: 0
 --- !u!60 &541431919
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1065,6 +1067,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathSceneName: DeathScene
   primeTimer: 0
+  indestructable: 0
 --- !u!60 &607004437
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1522,6 +1525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathSceneName: DeathScene
   primeTimer: 0
+  indestructable: 0
 --- !u!60 &1021021084
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1782,6 +1786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathSceneName: DeathScene
   primeTimer: 0
+  indestructable: 0
 --- !u!60 &1284689414
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2013,6 +2018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathSceneName: DeathScene
   primeTimer: 0
+  indestructable: 0
 --- !u!60 &1484548816
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2180,6 +2186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathSceneName: DeathScene
   primeTimer: 0
+  indestructable: 0
 --- !u!60 &1567792343
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2570,6 +2577,11 @@ Prefab:
       propertyPath: ColorModule.gradient.maxGradient.m_NumColorKeys
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 198436224645742230, guid: 972d3b0567f34e946aebc3d97759388c,
+        type: 2}
+      propertyPath: InitialModule.maxNumParticles
+      value: 1500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 972d3b0567f34e946aebc3d97759388c, type: 2}
   m_IsPrefabParent: 0
@@ -2620,6 +2632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathSceneName: DeathScene
   primeTimer: 0
+  indestructable: 0
 --- !u!60 &1763192234
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -79,7 +79,6 @@
      <Compile Include="Assets\Scripts\NPCBehaviors\EdgeDetector.cs" />
      <Compile Include="Assets\Scripts\NPCBehaviors\WallDetectorBehavior.cs" />
      <Compile Include="Assets\Scripts\OuputBehavior.cs" />
-     <Compile Include="Assets\Scripts\ParticleRotationSciript.cs" />
      <Compile Include="Assets\Scripts\PhasingProjectileBehavior.cs" />
      <Compile Include="Assets\Scripts\PistonBehavior.cs" />
      <Compile Include="Assets\Scripts\PlatformDetectorBehavior.cs" />

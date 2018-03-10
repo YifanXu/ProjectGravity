@@ -79,7 +79,11 @@ public class PlayerMove : MonoBehaviour {
 
     public Vector2 GetDirection (int index)
     {
+		if (Boss3Sc1.GravityDirectionNum == 1) {
+			return GravityBehavior.directions[(index + GravityBehavior.rotationIndex + 4002) % 4];
+		}
         return GravityBehavior.directions[(index + GravityBehavior.rotationIndex + 4000) % 4];
+
     }
 
     public void RestoreMove()

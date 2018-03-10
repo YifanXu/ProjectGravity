@@ -262,6 +262,7 @@
     <Compile Include="Assets\Scripts\StickyBehavior.cs" />
     <Compile Include="Assets\Scripts\StickyCube.cs" />
     <Compile Include="Assets\Scripts\SwitchInput.cs" />
+    <Compile Include="Assets\Scripts\TouchKillScript.cs" />
     <Compile Include="Assets\Scripts\TriggerOnDeathBehavior.cs" />
     <Compile Include="Assets\Scripts\TurretBehavior.cs" />
   </ItemGroup>

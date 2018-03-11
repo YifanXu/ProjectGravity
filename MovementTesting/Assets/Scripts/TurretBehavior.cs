@@ -59,15 +59,18 @@ public class TurretBehavior : MonoBehaviour {
 
     public void Shoot()
     {
+
         var newBullet = Instantiate(bullet, this.transform.position, new Quaternion());
         newBullet.GetComponent<Rigidbody2D>().AddForce(this.transform.eulerAngles.z.GetVector() * shootStrength);
         if (newBullet.GetComponent<MissileBehavior>() != null)
         {
             newBullet.GetComponent<MissileBehavior>().target = this.target;
+            SoundControl.instance.PlaySound(SoundControl.Sounds.Rocket);
         }
         if (newBullet.GetComponent<BulletBehavior>() != null)
         {
             newBullet.GetComponent<BulletBehavior>().parentObject = this.gameObject;
+            SoundControl.instance.PlaySound(SoundControl.Sounds.Gunshot);
         }
     }
 

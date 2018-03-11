@@ -44,6 +44,7 @@ public class PlayerInput : MonoBehaviour {
 
     public static void Die(string message)
     {
+        SoundControl.instance.PlaySound(SoundControl.Sounds.PlayerDeath);
         Boss3Sc1.GravityDirectionNum = 0;
         var death = Instantiate(Player.GetComponent<PlayerInput>().deathController);
         death.GetComponent<DeathControllerScript>().deathMessage = message;

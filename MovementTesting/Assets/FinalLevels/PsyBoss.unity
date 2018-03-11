@@ -159,7 +159,7 @@ Prefab:
     - target: {fileID: 114473793843079704, guid: 160a7f4e99aebb84480e1dd25c0407c1,
         type: 2}
       propertyPath: SceneName
-      value: FourthBoss
+      value: Level 16
       objectReference: {fileID: 0}
     - target: {fileID: 114473793843079704, guid: 160a7f4e99aebb84480e1dd25c0407c1,
         type: 2}
@@ -8043,6 +8043,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 3
+  DeathSound: 0
 --- !u!114 &1067423831
 MonoBehaviour:
   m_ObjectHideFlags: 0

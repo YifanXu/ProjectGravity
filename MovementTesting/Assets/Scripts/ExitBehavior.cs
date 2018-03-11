@@ -56,6 +56,10 @@ public class ExitBehavior : MonoBehaviour, IOutputModule {
 
     private void PassLevel()
     {
+        if(SoundControl.instance != null)
+        {
+            SoundControl.instance.PlaySound(SoundControl.Sounds.WinSound);
+        }
         if (thisLevel >= PlayerPrefs.GetInt("LevelAccessible", 1))
         {
             PlayerPrefs.SetInt("LevelAccessible", thisLevel + 1);

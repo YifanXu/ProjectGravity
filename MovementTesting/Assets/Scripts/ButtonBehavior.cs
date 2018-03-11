@@ -47,6 +47,11 @@ public class ButtonBehavior : MonoBehaviour {
         
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        this.extentionCount = -100f;
+    }
+
     void OnTriggerExit2D(Collider2D other)
     {
         extentionCount = extention;

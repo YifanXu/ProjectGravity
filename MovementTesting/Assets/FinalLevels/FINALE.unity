@@ -9841,6 +9841,11 @@ Prefab:
       propertyPath: indestructable
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114492855448188410, guid: 539fd0bcbf912e942a88e5c88f63c58e,
+        type: 2}
+      propertyPath: maxHealth
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 539fd0bcbf912e942a88e5c88f63c58e, type: 2}
   m_IsPrefabParent: 0
@@ -10545,7 +10550,7 @@ MonoBehaviour:
   maxHealth: 3
   health: 0
   healthDrain: 0
-  SpikeDamage: 0
+  SpikeDamage: 1
   invincible: 0
   killWith: {fileID: 0}
   killParticle: {fileID: 0}

@@ -58,6 +58,7 @@ public class LaserBehavior : MonoBehaviour,IOutputModule {
     {
         this.activated = isStart;
         this.GetComponent<SpriteRenderer>().enabled = isStart;
+        
 
         if(isStart)
         {

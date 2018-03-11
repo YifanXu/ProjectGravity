@@ -16,6 +16,8 @@ public class KillableEntityBehavior : MonoBehaviour {
     public GameObject killParticle;
     public Gradient colorGivenHealth;
 
+    public bool DeathSound = false;
+
 	// Use this for initialization
 	void Start () {
         health = maxHealth;
@@ -47,6 +49,11 @@ public class KillableEntityBehavior : MonoBehaviour {
 
     public void Kill()
     {
+        if(DeathSound)
+        {
+            SoundControl.instance.PlaySound(SoundControl.Sounds.BossDeath);
+        }
+
         if (killParticle != null)
         {
             killParticle.SetActive(true);

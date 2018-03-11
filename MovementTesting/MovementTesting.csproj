@@ -259,6 +259,7 @@
     <Compile Include="Assets\Scripts\RotatingBehavior.cs" />
     <Compile Include="Assets\Scripts\SelfDestruction.cs" />
     <Compile Include="Assets\Scripts\ShifterBehavior.cs" />
+    <Compile Include="Assets\Scripts\SoundControl.cs" />
     <Compile Include="Assets\Scripts\SpikeBehavior.cs" />
     <Compile Include="Assets\Scripts\SpinBehavior.cs" />
     <Compile Include="Assets\Scripts\StickyBehavior.cs" />

@@ -47,6 +47,7 @@ public class BossCannonBehavior : MonoBehaviour, IOutputModule {
     {
         if(charges == 4)
         {
+            SoundControl.instance.PlaySound(SoundControl.Sounds.Laser);
             laser.GetComponent<LaserBehavior>().Activate(true);
         }
     }

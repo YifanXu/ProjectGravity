@@ -2463,7 +2463,7 @@ Prefab:
     - target: {fileID: 114473793843079704, guid: 160a7f4e99aebb84480e1dd25c0407c1,
         type: 2}
       propertyPath: SceneName
-      value: Level 11
+      value: Level 6
       objectReference: {fileID: 0}
     - target: {fileID: 114473793843079704, guid: 160a7f4e99aebb84480e1dd25c0407c1,
         type: 2}
@@ -2581,6 +2581,20 @@ Prefab:
         type: 2}
       propertyPath: InitialModule.maxNumParticles
       value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833148987581684, guid: 972d3b0567f34e946aebc3d97759388c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198436224645742230, guid: 972d3b0567f34e946aebc3d97759388c,
+        type: 2}
+      propertyPath: randomSeed
+      value: 515216434
+      objectReference: {fileID: 0}
+    - target: {fileID: 198436224645742230, guid: 972d3b0567f34e946aebc3d97759388c,
+        type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 972d3b0567f34e946aebc3d97759388c, type: 2}
@@ -2979,6 +2993,11 @@ Prefab:
       objectReference: {fileID: 1168506151}
     - target: {fileID: 1952621456414372, guid: 3fa5b611fc6142a4cb501b567a1b8fc6, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114725765051050706, guid: 3fa5b611fc6142a4cb501b567a1b8fc6,
+        type: 2}
+      propertyPath: resetSwitches
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

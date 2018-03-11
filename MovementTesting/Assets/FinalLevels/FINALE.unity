@@ -216,6 +216,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!1 &25817879
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,6 +311,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!1001 &38277945
 Prefab:
   m_ObjectHideFlags: 0
@@ -1001,6 +1003,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!1 &158223407 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1943658152397560, guid: bfca79adc7e738648a9c3bfd5b471c9f,
@@ -1059,6 +1062,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!1 &167547735 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1943658152397560, guid: bfca79adc7e738648a9c3bfd5b471c9f,
@@ -1117,6 +1121,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!1 &171354041
 GameObject:
   m_ObjectHideFlags: 0
@@ -2441,6 +2446,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!1001 &284147477
 Prefab:
   m_ObjectHideFlags: 0
@@ -3407,6 +3413,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!1001 &437408802
 Prefab:
   m_ObjectHideFlags: 0
@@ -4422,6 +4429,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!1 &645561787
 GameObject:
   m_ObjectHideFlags: 0
@@ -5561,6 +5569,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!58 &838047294
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9200,6 +9209,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!1001 &908701488
 Prefab:
   m_ObjectHideFlags: 0
@@ -9542,6 +9552,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!1001 &969708753
 Prefab:
   m_ObjectHideFlags: 0
@@ -9907,6 +9918,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!1001 &1004730064
 Prefab:
   m_ObjectHideFlags: 0
@@ -10134,6 +10146,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!1 &1038051286
 GameObject:
   m_ObjectHideFlags: 0
@@ -10583,6 +10596,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!58 &1055400397
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11701,6 +11715,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!1 &1283750084 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1088939542790696, guid: d058abae9dea3144faca68b953511624,
@@ -15673,6 +15688,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!114 &1388643327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16583,6 +16599,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!1 &1636309098
 GameObject:
   m_ObjectHideFlags: 0
@@ -17573,6 +17590,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!1001 &1857793756
 Prefab:
   m_ObjectHideFlags: 0
@@ -17673,6 +17691,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!1 &1882869486 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1937788902748218, guid: f7f29837aa086d54a8771741b770285c,
@@ -17731,6 +17750,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!1 &1909423836 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1918055503699862, guid: 47a6ad552be6ef74ba6933a6af7adff9,
@@ -17921,6 +17941,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!58 &1923782486
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -18144,6 +18165,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!1 &1987906032 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1937788902748218, guid: f7f29837aa086d54a8771741b770285c,
@@ -18202,6 +18224,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  DeathSound: 0
 --- !u!1001 &1996613681
 Prefab:
   m_ObjectHideFlags: 0

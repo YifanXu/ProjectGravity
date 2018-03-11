@@ -243,6 +243,7 @@
     <Compile Include="Assets\Scripts\MaxVelocityBehavior.cs" />
     <Compile Include="Assets\Scripts\MenuControllerBehavior.cs" />
     <Compile Include="Assets\Scripts\MenuIconBehavior.cs" />
+    <Compile Include="Assets\Scripts\MenuScript.cs" />
     <Compile Include="Assets\Scripts\MessageBehavior.cs" />
     <Compile Include="Assets\Scripts\MissileBehavior.cs" />
     <Compile Include="Assets\Scripts\NPCBehaviors\BasicBehaviorBehavior.cs" />

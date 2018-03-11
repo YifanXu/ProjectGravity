@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class MusicControll : MonoBehaviour {
 
+    int currentTrack = -1;
+
     public static MusicControll instance;
     public string DeathScene;
     public string[] levelNames;
@@ -54,8 +56,16 @@ public class MusicControll : MonoBehaviour {
         }
         if(LevelName != DeathScene && audio.loop)
         {
+            int newTrack;
+            do
+            {
+                newTrack = GlobalMethods.r.Next(3);
+            } while (newTrack == currentTrack);
+
+            currentTrack = newTrack;
+
+            audio.clip = normalClips[currentTrack];
             audio.Stop();
-            audio.clip = normalClips[GlobalMethods.r.Next(3)];
             audio.Play();
             audio.loop = false;
         }

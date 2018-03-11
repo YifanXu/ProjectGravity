@@ -8,6 +8,7 @@ TagManager:
   - StageProp
   - Stage
   - Ghost
+  - music
   layers:
   - Default
   - TransparentFX

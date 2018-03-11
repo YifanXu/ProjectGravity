@@ -35,11 +35,11 @@ public class DeathControllerScript : MonoBehaviour {
 
 		if(Input.GetKeyDown(reviveKey))
         {
-            SceneManager.LoadScene(level);
+            MusicControll.instance.LoadLevel(level);
         }
         else if(Input.GetKeyDown(resetKey))
         {
-            SceneManager.LoadScene(startingLevel);
+            MusicControll.instance.LoadLevel(startingLevel);
         }
         else
         {

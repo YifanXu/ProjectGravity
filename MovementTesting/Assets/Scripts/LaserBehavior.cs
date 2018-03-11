@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LaserBehavior : MonoBehaviour,IOutputModule {
+    public bool resetSwitches = false;
 
     private float standardWidth;
     private GameObject target;
@@ -61,7 +62,10 @@ public class LaserBehavior : MonoBehaviour,IOutputModule {
         if(isStart)
         {
             timer = shootTime;
-            SwitchInput.ActivateAll();
+            if (resetSwitches)
+            {
+                SwitchInput.ActivateAll();
+            }
             GetComponentInParent<BossCannonBehavior>().UpdateSprite();
             target.GetComponent<KillableEntityBehavior>().Damage(1f);
         }

@@ -22,6 +22,6 @@ public class MenuControllerBehavior : MonoBehaviour {
     {
         GravityBehavior.ResetAll();
         SwitchInput.switches = new List<GameObject>();
-        SceneManager.LoadScene(name);
+        MusicControll.instance.LoadLevel(name);
     }
 }

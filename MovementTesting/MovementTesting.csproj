@@ -219,6 +219,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Music\MusicControll.cs" />
     <Compile Include="Assets\Scripts\Boss3Sc1.cs" />
     <Compile Include="Assets\Scripts\BossCannonBehavior.cs" />
     <Compile Include="Assets\Scripts\bossFireBehavior.cs" />
@@ -230,8 +231,10 @@
     <Compile Include="Assets\Scripts\DestroyMS.cs" />
     <Compile Include="Assets\Scripts\Diagonal.cs" />
     <Compile Include="Assets\Scripts\DoorBehavior.cs" />
+    <Compile Include="Assets\Scripts\EmergeBehavior.cs" />
     <Compile Include="Assets\Scripts\ExitBehavior.cs" />
     <Compile Include="Assets\Scripts\FakeSpikeScript.cs" />
+    <Compile Include="Assets\Scripts\FINALECONTROLLER.cs" />
     <Compile Include="Assets\Scripts\GlobalMethods.cs" />
     <Compile Include="Assets\Scripts\GravityBehavior.cs" />
     <Compile Include="Assets\Scripts\KillableEntityBehavior.cs" />

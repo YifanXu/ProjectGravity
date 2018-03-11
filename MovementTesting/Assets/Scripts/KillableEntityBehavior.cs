@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class KillableEntityBehavior : MonoBehaviour {
 
+    public GameObject damageTrigger;
+
     public float maxHealth = 3f;
-    private float health;
+    public float health;
     public float healthDrain = 0f;
     public float SpikeDamage = 1f;
     public bool invincible = false;
@@ -21,7 +23,10 @@ public class KillableEntityBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Damage(healthDrain * Time.deltaTime);
+        if (healthDrain != 0f)
+        {
+            Damage(healthDrain * Time.deltaTime);
+        }
 	}
 
     public void Damage(float amount)
@@ -34,11 +39,10 @@ public class KillableEntityBehavior : MonoBehaviour {
         }
         this.GetComponent<SpriteRenderer>().color = colorGivenHealth.Evaluate(health / maxHealth);
 
-        //var behaviorInParent = GetComponentInParent<KillableEntityBehavior>();
-        //if (behaviorInParent != null)
-        //{
-        //    behaviorInParent.Damage(amount);
-        //}
+        if(damageTrigger != null && amount != 0f)
+        {
+            damageTrigger.GetComponent<OuputBehavior>().Activate(true);
+        }
     }
 
     public void Kill()
@@ -68,7 +72,7 @@ public class KillableEntityBehavior : MonoBehaviour {
         var spike = collision.gameObject.GetComponent<SpikeBehavior>();
         if (spike != null && spike.primed && !invincible)
         {
-            this.health -= SpikeDamage;
+            Damage(SpikeDamage);
             Destroy(collision.gameObject);
         }
     }

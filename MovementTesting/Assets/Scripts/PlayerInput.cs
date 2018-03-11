@@ -38,12 +38,13 @@ public class PlayerInput : MonoBehaviour {
 
         if(Input.GetKeyUp(KeyCode.Escape))
         {
-            SceneManager.LoadScene(MenuScene);  
+            MusicControll.instance.LoadLevel(MenuScene);
         }
 	}
 
     public static void Die(string message)
     {
+        Boss3Sc1.GravityDirectionNum = 0;
         var death = Instantiate(Player.GetComponent<PlayerInput>().deathController);
         death.GetComponent<DeathControllerScript>().deathMessage = message;
     }

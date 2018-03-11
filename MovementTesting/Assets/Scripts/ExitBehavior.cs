@@ -62,6 +62,6 @@ public class ExitBehavior : MonoBehaviour, IOutputModule {
         }
         SwitchInput.ClearCache();
         GravityBehavior.ResetAll();
-        SceneManager.LoadScene(SceneName);
+        MusicControll.instance.LoadLevel(SceneName);
     }
 }

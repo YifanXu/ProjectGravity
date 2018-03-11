@@ -23,6 +23,7 @@ public class LevelUnlockMaster : MonoBehaviour {
         LoadButtons();
     }
 
+
     private void LoadButtons()
     {
         int LevelAccessible = PlayerPrefs.GetInt("LevelAccessible", 1);

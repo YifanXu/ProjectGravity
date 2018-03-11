@@ -15,7 +15,10 @@ public class MenuControllerBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(Input.GetKeyUp(KeyCode.Escape))
+        {
+            PlayScene("TitleScreen");
+        }
 	}
 
     public void PlayScene(string name)
@@ -24,4 +27,5 @@ public class MenuControllerBehavior : MonoBehaviour {
         SwitchInput.switches = new List<GameObject>();
         MusicControll.instance.LoadLevel(name);
     }
+    
 }

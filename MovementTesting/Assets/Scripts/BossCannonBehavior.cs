@@ -54,6 +54,9 @@ public class BossCannonBehavior : MonoBehaviour, IOutputModule {
 
     public void UpdateSprite()
     {
-        this.GetComponent<SpriteRenderer>().sprite = sprites[charges];
+        if (charges < sprites.Length)
+        {
+            this.GetComponent<SpriteRenderer>().sprite = sprites[charges];
+        }
     }
 }

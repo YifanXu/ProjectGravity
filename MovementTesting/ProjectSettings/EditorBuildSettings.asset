@@ -102,6 +102,9 @@ EditorBuildSettings:
     path: Assets/FinalLevels/Level 29.unity
     guid: 2fd7d583f114b254786525d4222572f4
   - enabled: 1
+    path: Assets/FinalLevels/FINALE.unity
+    guid: fbc3a36a99c195c45bc1601e926a699d
+  - enabled: 1
     path: Assets/FinalLevels/BonusLevel.unity
     guid: db2259c9ba8536f4493b13e8312437f2
   - enabled: 1

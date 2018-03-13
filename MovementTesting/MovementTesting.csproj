@@ -219,6 +219,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\adjustingRotation.cs" />
     <Compile Include="Assets\Music\MusicControll.cs" />
     <Compile Include="Assets\Scripts\Boss3Sc1.cs" />
     <Compile Include="Assets\Scripts\BossCannonBehavior.cs" />

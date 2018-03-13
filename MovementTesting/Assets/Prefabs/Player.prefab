@@ -105,7 +105,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   privateIndex: 0
-  enabled: 0
   rotateUponChange: 0
 --- !u!114 &114575761383469228
 MonoBehaviour:

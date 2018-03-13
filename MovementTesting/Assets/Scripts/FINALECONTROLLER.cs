@@ -44,6 +44,14 @@ public class FINALECONTROLLER : MonoBehaviour,IOutputModule {
         }
         currentStage++;
         stages[currentStage].SetActive(true);
+        if(currentStage == 3)
+        {
+            if (Boss3Sc1.GravityDirectionNum == 1)
+            {
+                Boss3Sc1.GravityDirectionNum = 0;
+                GravityBehavior.UpdateDirection(2);
+            }
+        }
         if(currentStage == 1)
         {
             trueBoss.SetActive(true);

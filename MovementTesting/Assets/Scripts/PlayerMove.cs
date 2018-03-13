@@ -13,7 +13,7 @@ public enum Direction {
 public class PlayerMove : MonoBehaviour {
 
     public Vector2 direction;
-    public bool special;
+    public bool special = false;
     public bool ClickMove;
 
     private static int jumpIndex = 2;
@@ -31,7 +31,7 @@ public class PlayerMove : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        this.canMove = true;
+        this.canMove = false;
 	}
 
     // Update is called once per frame
